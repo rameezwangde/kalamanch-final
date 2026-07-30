@@ -1,0 +1,145 @@
+﻿@font-face {
+  font-family: 'Bon Vivant';
+  src: url('/fonts/BonVivant-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+.promise-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: max(760px, 100svh);
+  overflow: hidden;
+  padding: clamp(110px, 9vw, 150px) clamp(30px, 7.5vw, 150px) clamp(100px, 8vw, 140px);
+  color: #353130;
+  background: #f7f6f3;
+}
+
+.promise-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: center;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  column-gap: clamp(90px, 11vw, 180px);
+}
+
+.promise-eyebrow {
+  margin: 0 0 35px;
+  color: #55504e;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12px, 0.95vw, 16px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.promise-heading { position: relative; }
+
+.promise-script {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -16px;
+  color: #34302f;
+  font-family: 'Bon Vivant', 'Allura', cursive;
+  font-size: clamp(92px, 8vw, 145px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.68;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  transform: translateX(-14px);
+}
+
+.promise-serif {
+  max-width: 650px;
+  margin: 0;
+  color: #373331;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(78px, 7.2vw, 126px);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.035em;
+}
+
+.promise-serif span { display: block; white-space: nowrap; }
+.promise-serif span + span { margin-top: 14px; }
+.promise-copy { align-self: center; transform: translateY(-10px); }
+
+.promise-copy p {
+  max-width: 490px;
+  margin: 0;
+  color: #5d5856;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(15px, 1.1vw, 19px);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.075em;
+}
+
+.promise-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 46px;
+  color: #373331;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 350ms ease;
+}
+
+.promise-link-line {
+  display: block;
+  width: 78px;
+  height: 1px;
+  background: rgba(55, 51, 49, 0.7);
+  transition: width 350ms ease, transform 350ms ease;
+}
+
+.promise-link:hover { opacity: 0.78; }
+.promise-link:hover .promise-link-line { width: 105px; transform: translateX(5px); }
+.promise-link:focus-visible { outline: 2px solid #373331; outline-offset: 8px; }
+
+@media (max-width: 1100px) {
+  .promise-section { padding-right: clamp(50px, 6vw, 65px); padding-left: clamp(50px, 6vw, 65px); }
+  .promise-inner { grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr); column-gap: clamp(55px, 7vw, 75px); }
+  .promise-script { font-size: clamp(86px, 10vw, 110px); }
+  .promise-serif { font-size: clamp(70px, 8vw, 90px); }
+  .promise-copy p { font-size: clamp(15px, 1.6vw, 17px); }
+}
+
+@media (max-width: 899px) {
+  .promise-section { min-height: auto; padding: 100px 50px 110px; }
+  .promise-inner { grid-template-columns: 1fr; row-gap: 65px; }
+  .promise-copy { max-width: 610px; transform: none; }
+}
+
+@media (max-width: 767px) {
+  .promise-section { align-items: start; padding: 90px 22px 100px; }
+  .promise-eyebrow { margin-bottom: 30px; font-size: 11px; line-height: 1.35; }
+  .promise-script { margin-bottom: -9px; font-size: clamp(72px, 23vw, 100px); line-height: 0.72; transform: translateX(-4px); }
+  .promise-serif { max-width: 100%; font-size: clamp(62px, 18vw, 84px); line-height: 0.82; }
+  .promise-serif span { white-space: normal; }
+  .promise-serif span + span { margin-top: 10px; }
+  .promise-copy p { max-width: 100%; font-size: 15px; line-height: 1.75; letter-spacing: 0.045em; }
+  .promise-link { gap: 18px; margin-top: 42px; font-size: 12px; letter-spacing: 0.16em; }
+  .promise-link-line { width: 54px; }
+}
+
+@media (max-width: 389px) {
+  .promise-script { font-size: 70px; }
+  .promise-serif { font-size: 58px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promise-link, .promise-link-line { transition-duration: 0.01ms; }
+}
+
