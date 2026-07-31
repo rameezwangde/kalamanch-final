@@ -1,22 +1,17 @@
-import Hero from './components/Hero/Hero';
-import PromiseSection from './components/PromiseSection/PromiseSection';
-import ServicesSection from './components/ServicesSection/ServicesSection';
-import QuoteSection from './components/QuoteSection/QuoteSection';
-import EventCollection from './components/EventCollection/EventCollection';
-import MomentsCollage from './components/MomentsCollage/MomentsCollage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 import SiteFooter from './components/SiteFooter/SiteFooter';
 
 export default function App() {
   return (
-    <>
-      <Hero />
-      <PromiseSection />
-      <EventCollection />
-      <MomentsCollage />
-      <ServicesSection />
-      <QuoteSection />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <SiteFooter />
-    </>
+    </BrowserRouter>
   );
 }
 
