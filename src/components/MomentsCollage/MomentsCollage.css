@@ -6,21 +6,21 @@
   font-weight: 400;
 }
 
-.moments-collage { position: relative; width: 100%; min-height: clamp(850px, 66vw, 1080px); overflow: hidden; padding-top: clamp(70px, 6vw, 110px); padding-bottom: clamp(90px, 9vw, 150px); background: #f8f8f6; }
+.moments-collage { position: relative; width: 100%; min-height: auto; overflow: hidden; padding-top: clamp(60px, 5vw, 90px); padding-bottom: clamp(60px, 5vw, 90px); background: #f8f8f6; }
 .moments-collage__inner { position: relative; width: 100%; max-width: none; margin: 0; }
 .moments-collage__title { position: relative; z-index: 5; width: 100%; margin: 0 auto; color: #c9b89b; pointer-events: none; font-family: 'Bon Vivant', cursive; font-size: clamp(110px, 10.2vw, 190px); font-weight: 400; font-style: italic; line-height: 0.72; letter-spacing: -0.025em; text-align: center; white-space: nowrap; }
 .moments-collage__title span { display: block; transform: translateY(10px); }
-.moments-collage__canvas { position: relative; width: 100%; height: clamp(620px, 46vw, 810px); margin-top: clamp(12px, 1.2vw, 24px); }
+.moments-collage__canvas { position: relative; width: 100%; height: clamp(450px, 35vw, 650px); margin-top: clamp(12px, 1.2vw, 24px); }
 .moment-image { position: absolute; margin: 0; overflow: hidden; background: #ddd; }
 .moment-image__reveal { width: 100%; height: 100%; }
 .moment-image img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.01); }
-.moment-image--one { z-index: 1; top: 15%; left: 2%; width: 22%; height: 50%; }
+.moment-image--one { z-index: 1; top: 10%; left: 2%; width: 22%; height: 70%; }
 .moment-image--one img { object-position: center 55%; }
-.moment-image--two { z-index: 3; top: 10%; left: 26%; width: 22%; height: 55%; }
+.moment-image--two { z-index: 3; top: 5%; left: 26%; width: 22%; height: 85%; }
 .moment-image--two img { object-position: center 35%; }
-.moment-image--three { z-index: 4; top: 20%; left: 50%; width: 22%; height: 70%; }
+.moment-image--three { z-index: 4; top: 10%; left: 50%; width: 22%; height: 80%; }
 .moment-image--three img { object-position: center center; }
-.moment-image--four { z-index: 2; top: 25%; left: 74%; width: 24%; height: 50%; }
+.moment-image--four { z-index: 2; top: 15%; left: 74%; width: 24%; height: 75%; }
 .moment-image--four img { object-position: center center; }
 
 @media (min-width: 768px) and (max-width: 1100px) {
