@@ -86,21 +86,6 @@ export default function MegaMenu({ isOpen, onClose }) {
                 ))}
               </ul>
             </nav>
-
-            <motion.div className="mega-menu__footer-info" variants={itemVariants}>
-              <div className="mega-menu__footer-col">
-                <h4>Address</h4>
-                <p>B-6/235, 1st Floor, Rohini Sector - 3,<br/>Delhi - 110085.</p>
-              </div>
-              <div className="mega-menu__footer-col">
-                <h4>Contact</h4>
-                <p><a href="tel:+919911089917">+91-9911089917</a> / <a href="tel:+919769402412">+91-9769402412</a></p>
-              </div>
-              <div className="mega-menu__footer-col">
-                <h4>Email</h4>
-                <p><a href="mailto:info@kalamanch.co.in">info@kalamanch.co.in</a></p>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       )}
