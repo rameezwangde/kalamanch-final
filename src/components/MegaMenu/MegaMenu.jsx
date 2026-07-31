@@ -6,8 +6,8 @@ import './MegaMenu.css';
 const links = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Gallery', href: '#moments-collage-title' },
+  { label: 'Services', href: '/services' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Video Trailers', href: '#video' },
   { label: 'Professional Work', href: '#event-tab-annual-days' },
   { label: 'Contact Us', href: '#enquire' }
