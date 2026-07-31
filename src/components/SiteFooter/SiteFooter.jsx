@@ -3,7 +3,7 @@ import './SiteFooter.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const groups = [
-  { title: 'Experiences', links: [{ label: 'Annual Days', href: '#event-tab-annual-days' }, { label: 'Cultural Festivals', href: '#event-tab-cultural-festivals' }, { label: 'Sports Events', href: '#event-tab-sports-events' }] },
+  { title: 'Experiences', links: [{ label: 'Chalta Purja', href: '#event-tab-chalta-purja' }, { label: 'Ghera', href: '#event-tab-ghera' }, { label: 'Kya Yehi Sabhyata', href: '#event-tab-kya-yehi-sabhyata' }] },
   { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '#promise-heading' }, { label: 'Our Team', href: '#team-story-title' }, { label: 'Our Moments', href: '#moments-collage-title' }] },
 ];
 

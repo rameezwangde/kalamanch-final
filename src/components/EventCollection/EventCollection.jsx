@@ -4,20 +4,24 @@ import './EventCollection.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const events = [
-  { id: 'annual-days', label: 'Annual Days', title: 'Annual Days', image: '/images/events/annual-day.jpg', alt: 'Students performing on a professionally lit stage during a school annual day' },
-  { id: 'sports-events', label: 'Sports Events', title: 'Sports Events', image: '/images/events/sports-event.jpg', alt: 'Students participating in an energetic outdoor school sports event' },
-  { id: 'talent-shows', label: 'Talent Shows', title: 'Talent Shows', image: '/images/events/talent-show.jpg', alt: 'A young student performing during a school talent show' },
-  { id: 'graduation', label: 'Graduation Ceremonies', title: 'Graduation Ceremonies', image: '/images/events/graduation.jpg', alt: 'Students gathered in graduation attire during a school ceremony' },
-  { id: 'cultural-festivals', label: 'Cultural Festivals', title: 'Cultural Festivals', image: '/images/events/cultural-festival.jpg', alt: 'Students performing a colourful cultural dance during a school festival' },
+  { id: 'chalta-purja', label: 'Chalta Purja', title: 'Chalta Purja', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521728/DSC_0278_fx912k.jpg', alt: 'Students performing on a professionally lit stage during a school annual day' },
+  { id: 'workshops', label: 'Workshops', title: 'Workshops', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students performing a colourful cultural dance during a school festival' },
+  { id: 'ghera', label: 'Ghera', title: 'Ghera', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students participating in an energetic outdoor school sports event' },
+  { id: 'kya-yehi-sabhyata', label: 'Kya Yehi Sabhyata', title: 'Kya Yehi Sabhyata', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521820/DSC_0236_g3efgo.jpg', alt: 'A young student performing during a school talent show' },
+  { id: 'stage-setup', label: 'Stage Setup', title: 'Stage Setup', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony' },
 ];
-const tabOrder = [events[0], events[4], events[1], events[2], events[3]];
+const tabOrder = events;
 
 export default function EventCollection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const cardRefs = useRef({});
   const reduceMotion = useReducedMotion();
   const activeEvent = events[activeIndex];
-  const visibleEvents = [events[(activeIndex - 1 + events.length) % events.length], activeEvent, events[(activeIndex + 1) % events.length]];
+  const visibleEvents = [
+    events[activeIndex],
+    events[(activeIndex + 1) % events.length],
+    events[(activeIndex + 2) % events.length]
+  ];
   const reveal = (delay, y) => reduceMotion ? {} : {
     initial: { opacity: 0, y },
     whileInView: { opacity: 1, y: 0 },
@@ -65,7 +69,7 @@ export default function EventCollection() {
 
       <motion.div className="event-collection__gallery-desktop" {...reveal(0.42, 36)}>
         <AnimatePresence initial={false} mode="popLayout">
-          {visibleEvents.map((event, index) => <EventCard event={event} isActive={index === 1} key={`${event.id}-${index}`} onSelect={selectEvent} />)}
+          {visibleEvents.map((event, index) => <EventCard event={event} isActive={index === 0} key={`${event.id}-${index}`} onSelect={selectEvent} />)}
         </AnimatePresence>
       </motion.div>
 
@@ -79,8 +83,10 @@ export default function EventCollection() {
 function EventCard({ event, isActive, onSelect, cardRef }) {
   return (
     <motion.article ref={cardRef} className={`event-card${isActive ? ' event-card--active' : ''}`} aria-label={`${event.title}. Discover this event category.`} role="button" tabIndex={0} layout initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.65, ease }} onClick={() => onSelect(event.id)} onKeyDown={(keyboardEvent) => { if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') { keyboardEvent.preventDefault(); onSelect(event.id); } }}>
-      <img className="event-card__image" src={event.image} alt={event.alt} loading="lazy" />
-      <span className="event-card__overlay" aria-hidden="true" />
+      <div className="event-card__image-wrapper">
+        <img className="event-card__image" src={event.image} alt={event.alt} loading="lazy" />
+        <span className="event-card__overlay" aria-hidden="true" />
+      </div>
       <div className="event-card__content">
         <h3>{event.title}</h3>
         <span className="event-card__cta">Discover<span aria-hidden="true" /></span>
