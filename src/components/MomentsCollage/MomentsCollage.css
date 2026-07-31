@@ -14,33 +14,30 @@
 .moment-image { position: absolute; margin: 0; overflow: hidden; background: #ddd; }
 .moment-image__reveal { width: 100%; height: 100%; }
 .moment-image img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.01); }
-.moment-image--one { z-index: 1; top: 11%; left: 4%; width: 27%; height: 48%; }
+.moment-image--one { z-index: 1; top: 15%; left: 2%; width: 22%; height: 50%; }
 .moment-image--one img { object-position: center 55%; }
-.moment-image--two { z-index: 3; top: 10.5%; left: 25.5%; width: 32.5%; height: 54%; }
+.moment-image--two { z-index: 3; top: 10%; left: 26%; width: 22%; height: 55%; }
 .moment-image--two img { object-position: center 35%; }
-.moment-image--three { z-index: 4; top: 18%; left: 49%; width: 29.5%; height: 72%; }
+.moment-image--three { z-index: 4; top: 20%; left: 50%; width: 22%; height: 70%; }
 .moment-image--three img { object-position: center center; }
-.moment-image--four { z-index: 2; top: 25%; left: 75%; width: 25%; height: 48%; }
+.moment-image--four { z-index: 2; top: 25%; left: 74%; width: 24%; height: 50%; }
 .moment-image--four img { object-position: center center; }
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .moments-collage { min-height: 820px; }
   .moments-collage__title { font-size: clamp(95px, 13vw, 135px); }
   .moments-collage__canvas { height: 650px; }
-  .moment-image--one { top: 12%; left: 3%; width: 34%; height: 39%; }
-  .moment-image--two { top: 10%; left: 28%; width: 41%; height: 48%; }
-  .moment-image--three { top: 25%; left: 52%; width: 37%; height: 63%; }
-  .moment-image--four { top: 18%; left: 79%; width: 29%; height: 40%; }
+  .moment-image--one { top: 15%; left: 2%; width: 22%; height: 40%; }
+  .moment-image--two { top: 10%; left: 26%; width: 22%; height: 50%; }
+  .moment-image--three { top: 25%; left: 50%; width: 22%; height: 60%; }
+  .moment-image--four { top: 18%; left: 74%; width: 24%; height: 45%; }
 }
 
 @media (max-width: 767px) {
-  .moments-collage { min-height: 1250px; padding-top: 70px; padding-bottom: 80px; }
-  .moments-collage__title { max-width: 95%; font-size: clamp(78px, 23vw, 120px); line-height: 0.75; white-space: normal; }
-  .moments-collage__canvas { height: 1050px; margin-top: 20px; }
-  .moment-image--one { top: 2%; left: 6%; width: 68%; height: 250px; }
-  .moment-image--two { top: 22%; left: 28%; width: 67%; height: 310px; }
-  .moment-image--three { top: 50%; left: 5%; width: 72%; height: 390px; }
-  .moment-image--four { top: 77%; left: 46%; width: 58%; height: 240px; }
+  .moments-collage { min-height: auto; padding-top: 70px; padding-bottom: 80px; }
+  .moments-collage__title { max-width: 95%; font-size: clamp(78px, 23vw, 120px); line-height: 0.75; white-space: normal; margin-bottom: 40px; }
+  .moments-collage__canvas { height: auto; margin-top: 20px; display: flex; flex-direction: column; gap: 60px; align-items: center; }
+  .moment-image { position: relative; top: auto !important; left: auto !important; width: 90% !important; height: 350px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
