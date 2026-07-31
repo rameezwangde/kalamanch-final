@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import './MomentsCollage.css';
 
@@ -63,7 +63,7 @@ export default function MomentsCollage() {
           {images.map((image, index) => (
             <motion.figure className={`moment-image ${image.className}`} key={image.src} style={{ y: reduceMotion ? 0 : smoothValues[index] }}>
               <motion.div className="moment-image__reveal" initial={reduceMotion ? false : { opacity: 0, clipPath: 'inset(15% 0 0 0)' }} whileInView={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }} transition={{ duration: 1.1, delay: reduceMotion ? 0 : image.delay, ease }} viewport={{ once: true, amount: 0.22 }}>
-                <img src={image.src} alt={image.alt} />
+                <img src={image.src} alt={image.alt} loading="lazy" />
               </motion.div>
             </motion.figure>
           ))}

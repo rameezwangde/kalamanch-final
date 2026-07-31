@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import './EventCollection.css';
 
@@ -79,7 +79,7 @@ export default function EventCollection() {
 function EventCard({ event, isActive, onSelect, cardRef }) {
   return (
     <motion.article ref={cardRef} className={`event-card${isActive ? ' event-card--active' : ''}`} aria-label={`${event.title}. Discover this event category.`} role="button" tabIndex={0} layout initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.65, ease }} onClick={() => onSelect(event.id)} onKeyDown={(keyboardEvent) => { if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') { keyboardEvent.preventDefault(); onSelect(event.id); } }}>
-      <img className="event-card__image" src={event.image} alt={event.alt} />
+      <img className="event-card__image" src={event.image} alt={event.alt} loading="lazy" />
       <span className="event-card__overlay" aria-hidden="true" />
       <div className="event-card__content">
         <h3>{event.title}</h3>

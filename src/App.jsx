@@ -1,25 +1,38 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Gallery from './pages/Gallery';
-import VideoTrailers from './pages/VideoTrailers';
-import ProfessionalWork from './pages/ProfessionalWork';
-import Contact from './pages/Contact';
+import { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import SiteFooter from './components/SiteFooter/SiteFooter';
+
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const VideoTrailers = lazy(() => import('./pages/VideoTrailers'));
+const ProfessionalWork = lazy(() => import('./pages/ProfessionalWork'));
+const Contact = lazy(() => import('./pages/Contact'));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/video-trailers" element={<VideoTrailers />} />
-        <Route path="/professional-work" element={<ProfessionalWork />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <ScrollToTop />
+      <Suspense fallback={<div style={{ height: '100vh', display: 'grid', placeItems: 'center', background: '#3b2823', color: '#fff' }}>Loading Kalamanch...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/video-trailers" element={<VideoTrailers />} />
+          <Route path="/professional-work" element={<ProfessionalWork />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
       <SiteFooter />
     </BrowserRouter>
   );
