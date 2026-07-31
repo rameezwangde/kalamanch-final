@@ -83,13 +83,15 @@ export default function ServicesSection() {
       <div className="services-list">
         {services.map((service, index) => (
           <div className="service-item" key={service.title}>
-            <motion.div 
-              className="service-image-container"
-              {...(reduceMotion ? {} : revealImage)}
-              initial={reduceMotion ? false : { opacity: 0, clipPath: index % 2 === 0 ? 'inset(0 0 0 15%)' : 'inset(0 15% 0 0)' }}
-            >
-              <img src={service.image} alt={service.alt} className="service-image" loading="lazy" />
-            </motion.div>
+            <div className="service-image-wrapper">
+              <motion.div 
+                className="service-image-container"
+                {...(reduceMotion ? {} : revealImage)}
+                initial={reduceMotion ? false : { opacity: 0, clipPath: index % 2 === 0 ? 'inset(0 0 0 15%)' : 'inset(0 15% 0 0)' }}
+              >
+                <img src={service.image} alt={service.alt} className="service-image" loading="lazy" />
+              </motion.div>
+            </div>
             
             <div className="service-content">
               <motion.h3 
