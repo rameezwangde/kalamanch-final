@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import VideoModal from '../VideoModal/VideoModal';
+import MegaMenu from '../MegaMenu/MegaMenu';
 import './Hero.css';
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
   const reduceMotion = useReducedMotion();
 
@@ -38,7 +40,7 @@ export default function Hero() {
         className={'hero-header' + (isHeaderScrolled ? ' hero-header--scrolled' : '')}
         {...enter(0.15, -14)}
       >
-        <button className="menu-trigger" type="button" aria-label="Open menu">
+        <button className="menu-trigger" type="button" aria-label="Open menu" onClick={() => setIsMenuOpen(true)}>
           <span className="menu-icon" aria-hidden="true">
             <span />
             <span />
@@ -107,6 +109,7 @@ export default function Hero() {
       </section>
 
       <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
+      <MegaMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
 }
