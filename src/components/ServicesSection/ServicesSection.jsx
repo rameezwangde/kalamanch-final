@@ -6,37 +6,37 @@ const services = [
   {
     title: 'Annual Functions',
     description: 'Providing diverse and unique themes to our clients by deeply understanding their requirements and fulfilling them flawlessly. As experts in school event management, we handle set designing, stage lighting, custom costume designing, professional make-up, and song choreography—all perfectly aligned with the nature and perspective of your chosen theme.',
-    image: '/images/events/annual-day.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521387/IMG_8422_ihld3s.jpg',
     alt: 'Students performing on stage during an annual day function',
   },
   {
     title: 'Theatre Workshop',
     description: 'Conducting comprehensive workshops on Theatre, Dance, Ballet, the Art of Perceiving, Body Movement, and Diction. The core idea of our educational workshop is to develop the overall personality of students. We introduce them to the fine nuances of all performance art forms, specifically focusing on building confidence and overcoming stage fear.',
-    image: '/images/events/talent-show.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521388/IMG_9482_vtj8r3.jpg',
     alt: 'Students participating in a theatre workshop',
   },
   {
     title: 'Comedy & All Types of Plays',
     description: 'Scripting and directing theatrical plays of every genre, whether it is a performance based on Satire, Tragedy, Comedy, or Musicals. We also produce plays by eminent writers (Shakespeare, Prem Chand, Moliere, Anton Chekov, Bertolt Brecht, etc.) and specialize in the enactment and dramatization of new, current cultural themes.',
-    image: '/images/events/cultural-festival.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521951/14566468_10154705820559155_2256816755133575632_o_gk0kj0.jpg',
     alt: 'Actors performing a play during a cultural festival',
   },
   {
     title: 'Fest & Shows',
     description: 'Organizing all types of cultural fests in schools and colleges for festive occasions like Diwali, Dushera, Christmas, and New Year, as well as days of celebration like Youth Day, Republic Day, Women’s Day, and Earth Day. We make each and every moment memorable by organizing thematic exhibitions as per client requirements and coordinating professional troupes to perform (Garba, Dandiya, Folk Dances, etc.).',
-    image: '/images/events/sports-event.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521414/STL_0531_brzuzp.jpg',
     alt: 'School students celebrating a festive cultural event',
   },
   {
     title: 'Performance Arts',
     description: 'Teaching students exactly how a final stage performance takes place. We introduce students to different art and dance forms, covering the basics of script writing, an introduction to stage lighting and professional make-up, character designing, acting improvisations, and voice modulation.',
-    image: '/images/kalamanch-team-school-event.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521962/34674467_1755841814492306_6993979136272236544_o_edmkve.jpg',
     alt: 'Student learning performance arts techniques',
   },
   {
     title: 'Media & Art',
     description: 'An introduction to Media and different types of cameras (Compact Camera, Box Camera, Reflex Camera, DSLR Camera, etc.) and various types of lenses. We teach how to make movies using professional cameras, shooting demo films and documentaries, and cover pre-production planning, post-production techniques, and the importance and basics of film editing.',
-    image: '/images/events/graduation.jpg',
+    image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg',
     alt: 'Students exploring media and camera techniques',
   },
 ];

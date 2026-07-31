@@ -4,10 +4,10 @@ import './MomentsCollage.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const images = [
-  { className: 'moment-image--one', src: '/images/moments/annual-day-stage.jpg', alt: 'Students performing during a warmly lit school annual-day celebration', delay: 0.05 },
-  { className: 'moment-image--two', src: '/images/moments/student-performer.jpg', alt: 'Student presenting confidently on stage during a school cultural programme', delay: 0.16 },
-  { className: 'moment-image--three', src: '/images/moments/cultural-dance.jpg', alt: 'Group of students performing a colourful cultural dance at a school event', delay: 0.27 },
-  { className: 'moment-image--four', src: '/images/moments/school-celebration.jpg', alt: 'Students celebrating during an outdoor school sports and activity day', delay: 0.38 },
+  { className: 'moment-image--one', src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521435/DSC01367_euhkac.jpg', alt: 'Students performing during a warmly lit school annual-day celebration', delay: 0.05 },
+  { className: 'moment-image--two', src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521957/32933236_1736966156379872_3356469662824005632_o_sef2l3.jpg', alt: 'Student presenting confidently on stage during a school cultural programme', delay: 0.16 },
+  { className: 'moment-image--three', src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521378/CL_3_aswrae.jpg', alt: 'Group of students performing a colourful cultural dance at a school event', delay: 0.27 },
+  { className: 'moment-image--four', src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521383/DSC00961_mkh8e2.jpg', alt: 'Students celebrating during an outdoor school sports and activity day', delay: 0.38 },
 ];
 
 const ranges = {
