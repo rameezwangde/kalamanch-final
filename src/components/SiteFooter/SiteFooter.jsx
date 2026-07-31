@@ -1,11 +1,10 @@
-﻿import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import './SiteFooter.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const groups = [
   { title: 'Experiences', links: [{ label: 'Annual Days', href: '#event-tab-annual-days' }, { label: 'Cultural Festivals', href: '#event-tab-cultural-festivals' }, { label: 'Sports Events', href: '#event-tab-sports-events' }] },
   { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '#promise-heading' }, { label: 'Our Team', href: '#team-story-title' }, { label: 'Our Moments', href: '#moments-collage-title' }] },
-  { title: 'For Schools', links: [{ label: 'Plan an Event', href: '#enquire' }, { label: 'Partner With Us', href: '#enquire' }, { label: 'Meet the Team', href: '#team-story-title' }] },
 ];
 
 export default function SiteFooter() {
@@ -40,6 +39,26 @@ export default function SiteFooter() {
               </ul>
             </nav>
           ))}
+
+          <div className="site-footer__group site-footer__contact-group">
+            <h2>Useful Information</h2>
+            <div className="site-footer__contact-item">
+              <strong>Location</strong>
+              <p>Kalamanch<br/>B-6/235, Ist Floor, Rohini Sector 3 Delhi 110085</p>
+            </div>
+            <div className="site-footer__contact-item">
+              <strong>Telephone</strong>
+              <p>+91-9911089917, +91-9769402412</p>
+            </div>
+            <div className="site-footer__contact-item">
+              <strong>Mail Us</strong>
+              <p><a href="mailto:info@kalamanch.co.in">info@kalamanch.co.in</a></p>
+            </div>
+            <div className="site-footer__contact-item">
+              <strong>Website</strong>
+              <p><a href="http://www.kalamanch.co.in" target="_blank" rel="noreferrer">www.kalamanch.co.in</a></p>
+            </div>
+          </div>
 
           <div className="site-footer__group site-footer__social-group">
             <h2>Connect</h2>
