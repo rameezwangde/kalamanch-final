@@ -8,7 +8,7 @@ const links = [
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Video Trailers', href: '#video' },
+  { label: 'Video Trailers', href: '/video-trailers' },
   { label: 'Professional Work', href: '#event-tab-annual-days' },
   { label: 'Contact Us', href: '#enquire' }
 ];
