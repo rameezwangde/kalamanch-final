@@ -20,8 +20,7 @@ export default function SiteFooter() {
     <footer className="site-footer" id="enquire">
       <div className="site-footer__inner">
         <motion.a className="site-footer__wordmark" href="/" aria-label="Kalamanch home" {...reveal(0.05, 18)}>
-          <span className="site-footer__wordmark-name">Kalamanch</span>
-          <span className="site-footer__wordmark-subtitle">Event Experiences</span>
+          <img src="/kalamanch-logo.jpg" alt="Kalamanch Theatre Production Company Logo" style={{ width: '140px', height: '140px', objectFit: 'contain' }} />
         </motion.a>
 
         <motion.div className="site-footer__trust" aria-label="Kalamanch values" {...reveal(0.15, 16)}>
