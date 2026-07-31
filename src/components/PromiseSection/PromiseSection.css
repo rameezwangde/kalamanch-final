@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: 'Bon Vivant';
   src: url('/fonts/BonVivant-Regular.woff2') format('woff2');
   font-display: swap;
@@ -10,9 +10,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: max(760px, 100svh);
+  min-height: auto;
   overflow: hidden;
-  padding: clamp(110px, 9vw, 150px) clamp(30px, 7.5vw, 150px) clamp(100px, 8vw, 140px);
+  padding: clamp(80px, 6vw, 100px) clamp(30px, 7.5vw, 150px) clamp(80px, 6vw, 100px);
   color: #353130;
   background: #f7f6f3;
 }
@@ -20,7 +20,7 @@
 .promise-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
@@ -28,7 +28,7 @@
 }
 
 .promise-eyebrow {
-  margin: 0 0 35px;
+  margin: 0 0 65px;
   color: #55504e;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(12px, 0.95vw, 16px);
@@ -68,7 +68,7 @@
 
 .promise-serif span { display: block; white-space: nowrap; }
 .promise-serif span + span { margin-top: 14px; }
-.promise-copy { align-self: center; transform: translateY(-10px); }
+.promise-copy { align-self: flex-start; margin-top: -5px; }
 
 .promise-copy p {
   max-width: 490px;
@@ -81,11 +81,20 @@
   letter-spacing: 0.075em;
 }
 
+.promise-signature {
+  font-family: 'Bon Vivant', 'Allura', cursive;
+  font-size: clamp(50px, 4vw, 75px);
+  color: #34302f;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
 .promise-link {
   display: inline-flex;
   align-items: center;
   gap: 24px;
-  margin-top: 46px;
+  margin-top: 26px;
   color: #373331;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -117,14 +126,14 @@
 }
 
 @media (max-width: 899px) {
-  .promise-section { min-height: auto; padding: 100px 50px 110px; }
-  .promise-inner { grid-template-columns: 1fr; row-gap: 65px; }
-  .promise-copy { max-width: 610px; transform: none; }
+  .promise-section { min-height: auto; padding: 80px 50px 90px; }
+  .promise-inner { grid-template-columns: 1fr; row-gap: 55px; }
+  .promise-copy { max-width: 610px; transform: none; margin-top: 0; }
 }
 
 @media (max-width: 767px) {
-  .promise-section { align-items: start; padding: 90px 22px 100px; }
-  .promise-eyebrow { margin-bottom: 30px; font-size: 11px; line-height: 1.35; }
+  .promise-section { align-items: start; padding: 70px 22px 80px; }
+  .promise-eyebrow { margin-bottom: 45px; font-size: 11px; line-height: 1.35; }
   .promise-script { margin-bottom: -9px; font-size: clamp(72px, 23vw, 100px); line-height: 0.72; transform: translateX(-4px); }
   .promise-serif { max-width: 100%; font-size: clamp(62px, 18vw, 84px); line-height: 0.82; }
   .promise-serif span { white-space: normal; }

@@ -1,4 +1,4 @@
-﻿import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import './PromiseSection.css';
 
 const ease = [0.22, 1, 0.36, 1];
@@ -45,9 +45,14 @@ export default function PromiseSection() {
         </div>
         <div className="promise-copy">
           <motion.p {...reveal(0.38, { y: 22 })}>
-            Kalamanch brings school communities together through thoughtfully curated events where
-            creativity, confidence, teamwork, and unforgettable moments take centre stage.
+            Led by Founder & Creative Head Mayank Hashmi—a nationally acclaimed theatre expert and NSD professional—Kalamanch is a premier hub for artistic innovation. With deep roots in Mandi House and the Natya Ballet Centre, we fuse music, dance drama, and performance arts to deliver high-quality theatre productions, educational workshops, and cultural events that inspire diverse audiences.
           </motion.p>
+          <motion.div
+            className="promise-signature"
+            {...reveal(0.44, { y: 15 })}
+          >
+            Mayank
+          </motion.div>
           <motion.a className="promise-link" href="#about" {...reveal(0.5, { x: -15 })}>
             <span>Discover Kalamanch</span>
             <span className="promise-link-line" aria-hidden="true" />
