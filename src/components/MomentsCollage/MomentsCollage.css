@@ -35,7 +35,7 @@
 
 @media (max-width: 767px) {
   .moments-collage { min-height: auto; padding-top: 70px; padding-bottom: 80px; }
-  .moments-collage__title { max-width: 95%; font-size: clamp(78px, 23vw, 120px); line-height: 0.75; white-space: normal; margin-bottom: 40px; }
+  .moments-collage__title { max-width: 95%; font-size: clamp(54px, 16vw, 90px); line-height: 1.1; white-space: normal; margin-bottom: 50px; }
   .moments-collage__canvas { height: auto; margin-top: 20px; display: flex; flex-direction: column; gap: 60px; align-items: center; }
   .moment-image { position: relative; top: auto !important; left: auto !important; width: 90% !important; height: 350px !important; }
 }

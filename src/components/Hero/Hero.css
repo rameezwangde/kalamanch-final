@@ -331,7 +331,7 @@
   }
 
   .hero-title {
-    font-size: clamp(66px, 22vw, 100px);
+    font-size: clamp(46px, 14vw, 70px);
   }
 
   .watch-trigger {
@@ -361,7 +361,7 @@
   }
 
   .hero-title {
-    font-size: 62px;
+    font-size: 40px;
   }
 }
 

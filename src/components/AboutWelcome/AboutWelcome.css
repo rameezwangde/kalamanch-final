@@ -71,6 +71,14 @@
   .about-welcome__image-wrapper {
     aspect-ratio: 1;
   }
+  .about-welcome__title {
+    font-size: clamp(55px, 16vw, 85px);
+    line-height: 1.1;
+  }
+  .about-page-heading {
+    font-size: clamp(60px, 18vw, 90px);
+    line-height: 1.1;
+  }
 }
 
 .about-page-heading-wrapper {
