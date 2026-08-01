@@ -40,11 +40,7 @@ export default function PageHeader() {
           <span className="wordmark-subtitle">Event Experiences</span>
         </a>
 
-        <a className="enquire-link" href="/contact" aria-label="Enquire now">
-          <span className="enquire-desktop">Enquire Now</span>
-          <span className="enquire-mobile">Enquire</span>
-          <span className="enquire-line" aria-hidden="true" />
-        </a>
+
       </motion.header>
 
       <MegaMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
