@@ -40,7 +40,7 @@ export default function QuoteSection() {
         id="quote-author"
         {...(reduceMotion ? {} : revealText(0.3))}
       >
-        MAYANK HASHMI
+        MAYANK JAIN
       </motion.div>
     </section>
   );

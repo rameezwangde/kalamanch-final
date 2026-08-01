@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
-import VideoModal from '../VideoModal/VideoModal';
+
 import MegaMenu from '../MegaMenu/MegaMenu';
 import './Hero.css';
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function Hero() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -89,18 +89,7 @@ export default function Hero() {
             Extraordinary
           </motion.h1>
 
-          <motion.button
-            className="watch-trigger"
-            type="button"
-            aria-label="Watch Kalamanch showreel"
-            onClick={() => setIsVideoOpen(true)}
-            {...enter(0.85, 16)}
-          >
-            <span>Watch</span>
-            <span className="watch-circle" aria-hidden="true">
-              <ChevronRight size={21} strokeWidth={1.4} />
-            </span>
-          </motion.button>
+
         </main>
 
         <div className="hero-scroll-indicator" aria-hidden="true">
@@ -108,7 +97,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
+
       <MegaMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
