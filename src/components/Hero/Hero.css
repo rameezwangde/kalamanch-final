@@ -26,12 +26,10 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(28, 17, 15, 0.2) 0%,
       rgba(50, 29, 25, 0.14) 42%,
-      rgba(30, 18, 18, 0.34) 100%
-    );
+      rgba(30, 18, 18, 0.34) 100%);
 }
 
 .hero-overlay::before,

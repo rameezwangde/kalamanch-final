@@ -29,10 +29,10 @@ export default function Hero() {
     reduceMotion
       ? {}
       : {
-          initial: { opacity: 0, y },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: y < 0 ? 1.1 : 1.2, delay, ease },
-        };
+        initial: { opacity: 0, y },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: y < 0 ? 1.1 : 1.2, delay, ease },
+      };
 
   return (
     <>
@@ -47,6 +47,7 @@ export default function Hero() {
           </span>
           <span className="menu-label">Menu</span>
         </button>
+
 
         <a className="wordmark" href="/" aria-label="Kalamanch home">
           <span className="wordmark-name">Kalamanch</span>
