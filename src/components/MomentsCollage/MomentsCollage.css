@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-.moments-collage { position: relative; width: 100%; min-height: auto; overflow: hidden; padding-top: clamp(60px, 5vw, 90px); padding-bottom: clamp(60px, 5vw, 90px); background: #f8f8f6; }
+.moments-collage { position: relative; width: 100%; min-height: auto; overflow: hidden; padding-top: clamp(60px, 5vw, 90px); padding-bottom: clamp(30px, 3vw, 50px); background: #f8f8f6; }
 .moments-collage__inner { position: relative; width: 100%; max-width: none; margin: 0; }
 .moments-collage__title { position: relative; z-index: 5; width: 100%; margin: 0 auto; color: #c9b89b; pointer-events: none; font-family: 'Bon Vivant', cursive; font-size: clamp(110px, 10.2vw, 190px); font-weight: 400; font-style: italic; line-height: 0.72; letter-spacing: -0.025em; text-align: center; white-space: nowrap; }
 .moments-collage__title span { display: block; transform: translateY(10px); }

@@ -1,4 +1,4 @@
-.event-collection { position: relative; width: 100%; min-height: 820px; overflow: hidden; padding-top: clamp(78px, 7vw, 115px); padding-bottom: 0; background: #f5f6f5; }
+.event-collection { position: relative; width: 100%; min-height: 820px; overflow: hidden; padding-top: clamp(40px, 4vw, 60px); padding-bottom: 0; background: #f5f6f5; }
 .event-collection__intro { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 32px; text-align: center; }
 .event-collection__eyebrow { margin: 0 0 18px; color: #3e3b39; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; line-height: 1; letter-spacing: 0.18em; text-transform: uppercase; }
 .event-collection__title { margin: 0; color: #2e2b2a; font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 4vw, 68px); font-weight: 400; line-height: 1; letter-spacing: -0.025em; }

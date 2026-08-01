@@ -1,6 +1,6 @@
 .feature-section {
   width: 100%;
-  padding: 80px clamp(24px, 5vw, 60px);
+  padding: 40px clamp(24px, 5vw, 60px);
   background: #f7f6f2;
 }
 

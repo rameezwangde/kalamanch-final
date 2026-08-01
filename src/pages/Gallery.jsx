@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import PageHeader from '../components/PageHeader/PageHeader';
-import MomentsCollage from '../components/MomentsCollage/MomentsCollage';
+
 import GalleryGrid from '../components/GalleryGrid/GalleryGrid';
 
 export default function Gallery() {
@@ -20,7 +20,7 @@ export default function Gallery() {
   };
 
   return (
-    <main className="gallery-page" style={{ background: '#fff', paddingBottom: '100px' }}>
+    <main className="gallery-page" style={{ background: '#fff', paddingBottom: '0' }}>
       <PageHeader />
       
       <div style={{ paddingTop: '160px', paddingBottom: '60px', textAlign: 'center', maxWidth: '800px', margin: '0 auto', paddingLeft: '24px', paddingRight: '24px' }}>
@@ -41,7 +41,7 @@ export default function Gallery() {
         </motion.p>
       </div>
 
-      <MomentsCollage />
+
       
       {/* Dynamic Cloudinary Masonry Grid */}
       <GalleryGrid />

@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px clamp(24px, 5vw, 60px) 140px;
+  padding: 40px clamp(24px, 5vw, 60px) 60px;
   background: #fff;
 }
 
