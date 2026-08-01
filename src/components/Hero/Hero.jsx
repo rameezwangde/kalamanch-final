@@ -85,11 +85,6 @@ export default function Hero() {
 
 
         <main className="hero-content">
-          <motion.h1 className="hero-title" {...enter(0.45, 26)}>
-            Extraordinary
-          </motion.h1>
-
-
         </main>
 
         <div className="hero-scroll-indicator" aria-hidden="true">
