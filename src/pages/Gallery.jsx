@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import PageHeader from '../components/PageHeader/PageHeader';
 import MomentsCollage from '../components/MomentsCollage/MomentsCollage';
+import GalleryGrid from '../components/GalleryGrid/GalleryGrid';
 
 export default function Gallery() {
   const reduceMotion = useReducedMotion();
@@ -41,6 +42,9 @@ export default function Gallery() {
       </div>
 
       <MomentsCollage />
+      
+      {/* Dynamic Cloudinary Masonry Grid */}
+      <GalleryGrid />
     </main>
   );
 }
