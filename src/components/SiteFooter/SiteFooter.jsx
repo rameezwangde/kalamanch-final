@@ -3,8 +3,15 @@ import './SiteFooter.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const groups = [
-  { title: 'Experiences', links: [{ label: 'Chalta Purja', href: '#event-tab-chalta-purja' }, { label: 'Ghera', href: '#event-tab-ghera' }, { label: 'Kya Yehi Sabhyata', href: '#event-tab-kya-yehi-sabhyata' }] },
-  { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '#promise-heading' }, { label: 'Our Team', href: '#team-story-title' }, { label: 'Our Moments', href: '#moments-collage-title' }] },
+  { title: 'Experiences', links: [
+    { label: 'Annual Functions', href: '/gallery?album=annual' },
+    { label: 'Chalta Purja', href: '/gallery?album=chalta' },
+    { label: 'Ghera', href: '/gallery?album=ghera' },
+    { label: 'Kya Yehi Sabhyata', href: '/gallery?album=kya-yehi' },
+    { label: 'Stage Setup', href: '/gallery?album=stage-setup' },
+    { label: 'Workshops', href: '/gallery?album=workshops' }
+  ] },
+  { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '/#promise-heading' }, { label: 'Our Team', href: '/#team-story-title' }, { label: 'Our Moments', href: '/#moments-collage-title' }] },
 ];
 
 export default function SiteFooter() {

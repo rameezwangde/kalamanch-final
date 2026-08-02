@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './GalleryGrid.css';
 
 const ALBUM_CONFIGS = [
@@ -19,6 +20,8 @@ export default function GalleryGrid() {
   // Tracks which album is currently open in the lightbox
   const [activeAlbum, setActiveAlbum] = useState(null);
   const reduceMotion = useReducedMotion();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchAlbums() {
@@ -50,6 +53,20 @@ export default function GalleryGrid() {
     
     fetchAlbums();
   }, []);
+
+  // Update active album when albums or location.search changes
+  useEffect(() => {
+    if (albums.length > 0) {
+      const params = new URLSearchParams(location.search);
+      const albumId = params.get('album');
+      if (albumId) {
+        const targetAlbum = albums.find(a => a.id === albumId);
+        if (targetAlbum) {
+          setActiveAlbum(targetAlbum);
+        }
+      }
+    }
+  }, [albums, location.search]);
 
   // Lock body scroll when lightbox is open
   useEffect(() => {
@@ -133,7 +150,12 @@ export default function GalleryGrid() {
               <h2 className="gallery-lightbox__title">{activeAlbum.title}</h2>
               <button 
                 className="gallery-lightbox__close"
-                onClick={() => setActiveAlbum(null)}
+                onClick={() => {
+                  setActiveAlbum(null);
+                  if (location.search) {
+                    navigate(location.pathname, { replace: true });
+                  }
+                }}
                 aria-label="Close Gallery"
               >
                 ✕
