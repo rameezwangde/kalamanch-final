@@ -71,9 +71,7 @@ export default function MegaMenu({ isOpen, onClose }) {
                 <span className="mega-menu__wordmark-subtitle">Event Experiences</span>
               </a>
               
-              <a href="/contact" className="mega-menu__enquire" onClick={onClose}>
-                Enquire Now
-              </a>
+
             </header>
             
             <nav className="mega-menu__nav">
