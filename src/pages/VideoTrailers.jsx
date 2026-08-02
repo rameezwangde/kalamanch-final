@@ -141,6 +141,7 @@ export default function VideoTrailers() {
                 title={video.title} 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerPolicy="strict-origin-when-cross-origin" 
+                loading="lazy"
                 allowFullScreen>
               </iframe>
             </div>
