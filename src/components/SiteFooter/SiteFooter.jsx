@@ -11,7 +11,7 @@ const groups = [
     { label: 'Stage Setup', href: '/gallery?album=stage-setup' },
     { label: 'Workshops', href: '/gallery?album=workshops' }
   ] },
-  { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '/#promise-heading' }, { label: 'Our Team', href: '/#team-story-title' }, { label: 'Our Moments', href: '/#moments-collage-title' }] },
+  { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '/promise' }, { label: 'Our Team', href: '/team' }, { label: 'Our Moments', href: '/moments' }] },
 ];
 
 export default function SiteFooter() {
