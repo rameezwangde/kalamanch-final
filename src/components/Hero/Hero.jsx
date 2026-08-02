@@ -66,7 +66,7 @@ export default function Hero() {
           loop
           playsInline
           preload="auto"
-          poster="/images/kalamanch-hero-poster.jpg"
+          poster="https://res.cloudinary.com/crw5jo8x/video/upload/v1785663887/The_Count_of_Monte_Cristo_-_Trailer_95MB_ystiva.jpg"
           aria-hidden="true"
         >
           <source src="https://res.cloudinary.com/crw5jo8x/video/upload/v1785663887/The_Count_of_Monte_Cristo_-_Trailer_95MB_ystiva.mp4" type="video/mp4" />
