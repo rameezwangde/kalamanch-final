@@ -86,25 +86,57 @@
   min-height: 180px;
 }
 
-.contact-submit-btn {
-  align-self: center;
+.contact-submit-options {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
   margin-top: 10px;
-  padding: 15px 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+}
+
+.contact-submit-btn {
+  background-color: #34302f;
   color: #fff;
-  background: #222;
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
+  padding: 16px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  transition: background 0.3s ease;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 250px;
 }
 
 .contact-submit-btn:hover {
-  background: #000;
+  background-color: #211e1d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1DA851;
+}
+
+.email-btn {
+  background-color: #34302f;
+}
+
+@media (max-width: 768px) {
+  .contact-submit-options {
+    flex-direction: column;
+  }
+  
+  .contact-submit-btn {
+    max-width: 100%;
+  }
 }
 
 .contact-privacy {

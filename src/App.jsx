@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import SiteFooter from './components/SiteFooter/SiteFooter';
+import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -42,6 +43,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <SiteFooter />
+      <WhatsAppWidget />
     </BrowserRouter>
   );
 }

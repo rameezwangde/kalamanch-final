@@ -1,8 +1,32 @@
+import { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import './ContactForm.css';
 
 export default function ContactForm() {
   const reduceMotion = useReducedMotion();
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleWhatsapp = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill the required fields.");
+      return;
+    }
+    const text = `*New Enquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Message:* ${formData.message}`;
+    window.open(`https://wa.me/919769402412?text=${text}`, '_blank');
+  };
+
+  const handleEmail = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill the required fields.");
+      return;
+    }
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    window.location.href = `mailto:info@kalamanch.co.in?subject=Website Enquiry from ${formData.name}&body=${body}`;
+  };
 
   const reveal = {
     initial: { opacity: 0, y: 20 },
@@ -25,21 +49,24 @@ export default function ContactForm() {
       >
         <div className="contact-form-row">
           <div className="contact-input-group">
-            <input type="text" className="contact-input" placeholder="NAME *" required />
+            <input type="text" name="name" value={formData.name} onChange={handleChange} className="contact-input" placeholder="NAME *" required />
           </div>
           <div className="contact-input-group">
-            <input type="email" className="contact-input" placeholder="E-MAIL *" required />
+            <input type="email" name="email" value={formData.email} onChange={handleChange} className="contact-input" placeholder="E-MAIL *" required />
           </div>
           <div className="contact-input-group">
-            <input type="tel" className="contact-input" placeholder="PHONE" />
+            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="contact-input" placeholder="PHONE" />
           </div>
         </div>
         
         <div className="contact-input-group">
-          <textarea className="contact-textarea" placeholder="MESSAGE *" required></textarea>
+          <textarea name="message" value={formData.message} onChange={handleChange} className="contact-textarea" placeholder="MESSAGE *" required></textarea>
         </div>
         
-        <button type="submit" className="contact-submit-btn">Send</button>
+        <div className="contact-submit-options">
+          <button type="button" onClick={handleWhatsapp} className="contact-submit-btn whatsapp-btn">Send via WhatsApp</button>
+          <button type="button" onClick={handleEmail} className="contact-submit-btn email-btn">Send via Email</button>
+        </div>
       </motion.form>
 
       <motion.div className="contact-privacy" {...(reduceMotion ? {} : reveal)}>

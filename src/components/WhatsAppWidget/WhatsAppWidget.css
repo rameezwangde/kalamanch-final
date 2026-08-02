@@ -1,0 +1,59 @@
+.floating-widgets {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.whatsapp-widget, .email-widget {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  color: white;
+}
+
+.whatsapp-widget {
+  background-color: #25D366;
+}
+
+.whatsapp-widget:hover {
+  background-color: #1DA851;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  color: white;
+}
+
+.email-widget {
+  background-color: #34302f;
+}
+
+.email-widget:hover {
+  background-color: #211e1d;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .floating-widgets {
+    bottom: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+  .whatsapp-widget, .email-widget {
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-widget svg, .email-widget svg {
+    width: 26px;
+    height: 26px;
+  }
+}
