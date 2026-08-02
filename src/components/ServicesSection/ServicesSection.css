@@ -41,7 +41,7 @@
 .service-item {
   display: flex;
   align-items: stretch;
-  min-height: 150vh;
+  min-height: 60vh;
 }
 
 .service-item:nth-child(even) {
@@ -54,10 +54,9 @@
 }
 
 .service-image-container {
-  position: sticky;
-  top: 0;
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background: #f0f0f0;
 }

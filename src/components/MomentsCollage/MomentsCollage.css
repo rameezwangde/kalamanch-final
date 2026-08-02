@@ -14,23 +14,19 @@
 .moment-image { position: absolute; margin: 0; overflow: hidden; background: #ddd; }
 .moment-image__reveal { width: 100%; height: 100%; }
 .moment-image img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.01); }
-.moment-image--one { z-index: 1; top: 10%; left: 2%; width: 22%; height: 70%; }
-.moment-image--one img { object-position: center 55%; }
-.moment-image--two { z-index: 3; top: 5%; left: 26%; width: 22%; height: 85%; }
-.moment-image--two img { object-position: center 35%; }
-.moment-image--three { z-index: 4; top: 10%; left: 50%; width: 22%; height: 80%; }
+.moment-image--one { z-index: 1; top: 10%; left: 2%; width: 22.5%; height: 80%; }
+.moment-image--one img { object-position: center center; }
+.moment-image--two { z-index: 3; top: 10%; left: 26.5%; width: 22.5%; height: 80%; }
+.moment-image--two img { object-position: center center; }
+.moment-image--three { z-index: 4; top: 10%; left: 51%; width: 22.5%; height: 80%; }
 .moment-image--three img { object-position: center center; }
-.moment-image--four { z-index: 2; top: 15%; left: 74%; width: 24%; height: 75%; }
+.moment-image--four { z-index: 2; top: 10%; left: 75.5%; width: 22.5%; height: 80%; }
 .moment-image--four img { object-position: center center; }
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .moments-collage { min-height: 820px; }
   .moments-collage__title { font-size: clamp(95px, 13vw, 135px); }
   .moments-collage__canvas { height: 650px; }
-  .moment-image--one { top: 15%; left: 2%; width: 22%; height: 40%; }
-  .moment-image--two { top: 10%; left: 26%; width: 22%; height: 50%; }
-  .moment-image--three { top: 25%; left: 50%; width: 22%; height: 60%; }
-  .moment-image--four { top: 18%; left: 74%; width: 24%; height: 45%; }
 }
 
 @media (max-width: 767px) {
