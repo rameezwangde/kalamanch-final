@@ -9,7 +9,6 @@ const links = [
   { label: 'Services', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Video Trailers', href: '/video-trailers' },
-  { label: 'Professional Work', href: '/professional-work' },
   { label: 'Contact Us', href: '/contact' }
 ];
 
@@ -54,7 +53,7 @@ export default function MegaMenu({ isOpen, onClose }) {
           exit="exit"
         >
           <div className="mega-menu__image-pane">
-            <img src="/images/events/annual-day.jpg" alt="Kalamanch Event" loading="lazy" />
+            <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521386/DSC01406_lz5yxm.jpg" alt="Kalamanch Event" loading="lazy" />
           </div>
           
           <div className="mega-menu__content-pane">
