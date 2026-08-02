@@ -5,7 +5,7 @@ import './EventCollection.css';
 const ease = [0.22, 1, 0.36, 1];
 const events = [
   { id: 'annual-functions', label: 'Annual Functions', title: 'Annual Functions', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521728/DSC_0278_fx912k.jpg', alt: 'Students performing on a professionally lit stage during a school annual day', link: 'https://youtu.be/o38HCbjMe2g?si=7jWczrLaP9391XRs' },
-  { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: '/professional-shows.png', alt: 'Students performing a colourful cultural dance during a school festival', link: 'https://youtu.be/8kpE_Ml6Cd8?si=r3LwhNwwT7Bbu-K6' },
+  { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students performing a colourful cultural dance during a school festival', link: 'https://youtu.be/8kpE_Ml6Cd8?si=r3LwhNwwT7Bbu-K6' },
   { id: 'makings', label: 'Makings', title: 'Makings', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students participating in an energetic outdoor school sports event', link: 'https://youtu.be/asnBD7xijew?si=dc4fknt_Xku9sXEQ' },
   { id: 'theatre-workshops', label: 'Theatre Workshops', title: 'Theatre Workshops', image: '/theatre-workshops.png', alt: 'A young student performing during a school talent show', link: 'https://youtu.be/-_UbUcgIiDA?si=wEIZPQGo1sadQ9Dp' },
   { id: 'teacher-masterclass', label: 'Teacher Masterclass', title: 'Teacher Masterclass', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony', link: 'https://youtu.be/DnmEohT1zDo?si=OUp-0Xogw-M81onA' },
@@ -119,11 +119,11 @@ export default function EventCollection() {
       <motion.div className="event-collection__gallery-desktop" {...reveal(0.42, 36)}>
         <AnimatePresence initial={false} mode="popLayout">
           {tabOrder.map((event) => (
-            <EventCard 
-              event={event} 
-              isActive={event.id === activeEvent.id} 
-              key={event.id} 
-              onSelect={selectEvent} 
+            <EventCard
+              event={event}
+              isActive={event.id === activeEvent.id}
+              key={event.id}
+              onSelect={selectEvent}
             />
           ))}
         </AnimatePresence>
@@ -153,18 +153,18 @@ function EventCard({ event, isActive, onSelect, cardRef }) {
   };
 
   return (
-    <motion.article 
-      ref={cardRef} 
-      className={`event-card${isActive ? ' event-card--active' : ''}`} 
-      aria-label={`${event.title}. Discover this event category.`} 
-      role="button" 
-      tabIndex={0} 
-      layout 
-      initial={{ opacity: 0, x: 24 }} 
-      animate={{ opacity: 1, x: 0 }} 
-      exit={{ opacity: 0, x: -24 }} 
-      transition={{ duration: 0.65, ease }} 
-      onClick={handleSelect} 
+    <motion.article
+      ref={cardRef}
+      className={`event-card${isActive ? ' event-card--active' : ''}`}
+      aria-label={`${event.title}. Discover this event category.`}
+      role="button"
+      tabIndex={0}
+      layout
+      initial={{ opacity: 0, x: 24 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -24 }}
+      transition={{ duration: 0.65, ease }}
+      onClick={handleSelect}
       onKeyDown={handleKeyDown}
     >
       <div className="event-card__image-wrapper">
