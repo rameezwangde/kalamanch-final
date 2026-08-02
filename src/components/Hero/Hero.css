@@ -129,6 +129,13 @@
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+  transition: opacity 300ms ease;
+}
+
+/* Hide HTML logo when at the top, since the hero video has it burned in */
+.hero-header:not(.hero-header--scrolled) .wordmark {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .wordmark-name {
