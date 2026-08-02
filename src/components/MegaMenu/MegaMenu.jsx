@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ArrowUpRight } from 'lucide-react';
 import './MegaMenu.css';
 
 const links = [
@@ -14,7 +14,6 @@ const links = [
 ];
 
 export default function MegaMenu({ isOpen, onClose }) {
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -30,61 +29,79 @@ export default function MegaMenu({ isOpen, onClose }) {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
-      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.1 }
+      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
     },
     exit: { 
       opacity: 0,
-      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1], delay: 0.2 }
+    }
+  };
+
+  const panelVariants = {
+    hidden: { x: '-100%' },
+    visible: { 
+      x: 0, 
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.05, delayChildren: 0.1 } 
+    },
+    exit: { 
+      x: '-100%', 
+      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } 
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }
   };
 
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          className="mega-menu"
+          className="mega-menu-overlay"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
+          onClick={onClose}
         >
-          <div className="mega-menu__image-pane">
-            <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521386/DSC01406_lz5yxm.jpg" alt="Kalamanch Event" loading="lazy" />
-          </div>
-          
-          <div className="mega-menu__content-pane">
-            <header className="mega-menu__header">
+          <motion.div 
+            className="mega-menu-sidebar"
+            variants={panelVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mega-menu-sidebar__header">
               <button 
-                className="mega-menu__close" 
+                className="mega-menu-sidebar__close" 
                 onClick={onClose}
                 aria-label="Close menu"
               >
                 <X strokeWidth={1.5} /> Close
               </button>
-              
-              <a href="/" className="mega-menu__wordmark" onClick={onClose}>
-                <span className="mega-menu__wordmark-name">Kalamanch</span>
-                <span className="mega-menu__wordmark-subtitle">Event Experiences</span>
-              </a>
-              
-
-            </header>
+            </div>
             
-            <nav className="mega-menu__nav">
-              <ul className="mega-menu__list">
+            <nav className="mega-menu-sidebar__nav">
+              <ul className="mega-menu-sidebar__list">
                 {links.map((link) => (
-                  <motion.li key={link.label} className="mega-menu__item" variants={itemVariants}>
+                  <motion.li key={link.label} className="mega-menu-sidebar__item" variants={itemVariants}>
                     <a href={link.href} onClick={onClose}>{link.label}</a>
                   </motion.li>
                 ))}
               </ul>
             </nav>
-          </div>
+
+            <motion.div className="mega-menu-sidebar__footer" variants={itemVariants}>
+              <a href="/contact" className="mega-menu-sidebar__cta" onClick={onClose}>
+                Let's Talk
+                <span className="mega-menu-sidebar__cta-icon">
+                  <ArrowUpRight size={18} strokeWidth={2.5} />
+                </span>
+              </a>
+            </motion.div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
