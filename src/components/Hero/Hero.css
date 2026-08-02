@@ -132,11 +132,7 @@
   transition: opacity 300ms ease;
 }
 
-/* Hide HTML logo when at the top, since the hero video has it burned in */
-.hero-header:not(.hero-header--scrolled) .wordmark {
-  opacity: 0;
-  pointer-events: none;
-}
+
 
 .wordmark-name {
   font-family: 'Cormorant Garamond', serif;
@@ -275,7 +271,12 @@
 
 @media (max-width: 767px) {
   .hero {
-    min-height: 620px;
+    min-height: 100svh; /* Ensure it stays full height */
+  }
+
+  .hero-video {
+    object-fit: contain;
+    background-color: #000; /* Add black background to blend with video letterboxing */
   }
 
   .hero-header {
