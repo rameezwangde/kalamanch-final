@@ -69,7 +69,7 @@ export default function Hero() {
           poster="/images/kalamanch-hero-poster.jpg"
           aria-hidden="true"
         >
-          <source src="/videos/kalamanch-hero.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/crw5jo8x/video/upload/v1785663887/The_Count_of_Monte_Cristo_-_Trailer_95MB_ystiva.mp4" type="video/mp4" />
         </video>
 
         <motion.div
