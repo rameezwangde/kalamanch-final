@@ -57,7 +57,7 @@ export default function SiteFooter() {
             </div>
             <div className="site-footer__contact-item">
               <strong>Mail Us</strong>
-              <p><a href="mailto:info@kalamanch.co.in">info@kalamanch.co.in</a></p>
+              <p><a href="mailto:kalamanch.co.in@gmail.com">kalamanch.co.in@gmail.com</a></p>
             </div>
             <div className="site-footer__contact-item">
               <strong>Website</strong>

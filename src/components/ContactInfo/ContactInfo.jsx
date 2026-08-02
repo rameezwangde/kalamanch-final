@@ -56,7 +56,7 @@ export default function ContactInfo() {
             <div className="contact-info-content">
               <h3>E-Mail</h3>
               <p>
-                Email: <a href="mailto:info@kalamanch.co.in">info@kalamanch.co.in</a><br/>
+                Email: <a href="mailto:kalamanch.co.in@gmail.com">kalamanch.co.in@gmail.com</a><br/>
                 Website: <a href="https://www.kalamanch.co.in" target="_blank" rel="noopener noreferrer">www.kalamanch.co.in</a>
               </p>
             </div>

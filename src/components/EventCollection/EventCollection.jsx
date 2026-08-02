@@ -50,16 +50,65 @@ export default function EventCollection() {
     cardRefs.current[activeEvent.id]?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
   }, [activeEvent.id, reduceMotion]);
 
+  const tabsRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - tabsRef.current.offsetLeft);
+    setScrollLeft(tabsRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tabsRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll-fast
+    tabsRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section className="event-collection" aria-labelledby="event-collection-title">
       <div className="event-collection__intro">
         <motion.p className="event-collection__eyebrow" {...reveal(0.05, 14)}>Discover the</motion.p>
         <motion.h2 className="event-collection__title" id="event-collection-title" {...reveal(0.15, 24)}>Kalamanch Experience</motion.h2>
-        <motion.div className="event-collection__tabs" role="tablist" aria-label="School event categories" {...reveal(0.3, 18)}>
+        <motion.div
+          className="event-collection__tabs"
+          role="tablist"
+          aria-label="School event categories"
+          {...reveal(0.3, 18)}
+          ref={tabsRef}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+        >
           {tabOrder.map((event, tabIndex) => {
             const isActive = event.id === activeEvent.id;
             return (
-              <button className={`event-tab${isActive ? ' event-tab--active' : ''}`} id={`event-tab-${event.id}`} key={event.id} type="button" role="tab" aria-selected={isActive} tabIndex={isActive ? 0 : -1} onClick={() => selectEvent(event.id)} onKeyDown={(keyboardEvent) => handleTabKeyDown(keyboardEvent, tabIndex)}>
+              <button
+                className={`event-tab${isActive ? ' event-tab--active' : ''}`}
+                id={`event-tab-${event.id}`}
+                key={event.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                tabIndex={isActive ? 0 : -1}
+                onClick={() => selectEvent(event.id)}
+                onKeyDown={(keyboardEvent) => handleTabKeyDown(keyboardEvent, tabIndex)}
+                style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
+              >
                 <span className="event-tab__line" aria-hidden="true" />{event.label}
               </button>
             );
@@ -69,7 +118,14 @@ export default function EventCollection() {
 
       <motion.div className="event-collection__gallery-desktop" {...reveal(0.42, 36)}>
         <AnimatePresence initial={false} mode="popLayout">
-          {visibleEvents.map((event, index) => <EventCard event={event} isActive={index === 0} key={`${event.id}-${index}`} onSelect={selectEvent} />)}
+          {tabOrder.map((event) => (
+            <EventCard 
+              event={event} 
+              isActive={event.id === activeEvent.id} 
+              key={event.id} 
+              onSelect={selectEvent} 
+            />
+          ))}
         </AnimatePresence>
       </motion.div>
 

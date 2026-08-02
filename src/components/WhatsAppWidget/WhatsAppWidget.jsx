@@ -5,7 +5,7 @@ export default function WhatsAppWidget() {
   return (
     <div className="floating-widgets">
       <a 
-        href="mailto:info@kalamanch.co.in" 
+        href="mailto:kalamanch.co.in@gmail.com" 
         target="_blank" 
         rel="noopener noreferrer"
         className="email-widget"

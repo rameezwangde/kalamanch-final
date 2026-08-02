@@ -25,7 +25,7 @@ export default function ContactForm() {
       return;
     }
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    window.location.href = `mailto:info@kalamanch.co.in?subject=Website Enquiry from ${formData.name}&body=${body}`;
+    window.location.href = `mailto:kalamanch.co.in@gmail.com?subject=Website Enquiry from ${formData.name}&body=${body}`;
   };
 
   const reveal = {
