@@ -27,7 +27,7 @@ export default function QuoteSection() {
         className="quote-text"
         {...(reduceMotion ? {} : revealText(0.1))}
       >
-        To my mind, the greatest reward of school theatre is to be able to experience everyday moments of discovery as if for the first time, to be in a position in which a student's newfound confidence is so familiar it is never taken for granted.
+        Theatre is not merely about performing on a stage; it is the profound journey of discovering one's true voice. Watching a student transform into a confident storyteller is the most powerful magic we can ever witness.
       </motion.p>
       
       <motion.div 
