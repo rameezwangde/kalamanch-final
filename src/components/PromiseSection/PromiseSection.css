@@ -43,7 +43,7 @@
 .promise-script {
   position: relative;
   z-index: 2;
-  margin-bottom: -16px;
+  margin-bottom: 10px;
   color: #34302f;
   font-family: 'Bon Vivant', 'Allura', cursive;
   font-size: clamp(92px, 8vw, 145px);
@@ -134,7 +134,7 @@
 @media (max-width: 767px) {
   .promise-section { align-items: start; padding: 70px 22px 80px; }
   .promise-eyebrow { margin-bottom: 45px; font-size: 11px; line-height: 1.35; }
-  .promise-script { margin-bottom: -9px; font-size: clamp(72px, 23vw, 100px); line-height: 0.72; transform: translateX(-4px); }
+  .promise-script { margin-bottom: 5px; font-size: clamp(72px, 23vw, 100px); line-height: 0.72; transform: translateX(-4px); }
   .promise-serif { max-width: 100%; font-size: clamp(62px, 18vw, 84px); line-height: 0.82; }
   .promise-serif span { white-space: normal; }
   .promise-serif span + span { margin-top: 10px; }
