@@ -4,11 +4,11 @@ import './EventCollection.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const events = [
-  { id: 'chalta-purja', label: 'Chalta Purja', title: 'Chalta Purja', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521728/DSC_0278_fx912k.jpg', alt: 'Students performing on a professionally lit stage during a school annual day' },
-  { id: 'workshops', label: 'Workshops', title: 'Workshops', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students performing a colourful cultural dance during a school festival' },
-  { id: 'ghera', label: 'Ghera', title: 'Ghera', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students participating in an energetic outdoor school sports event' },
-  { id: 'kya-yehi-sabhyata', label: 'Kya Yehi Sabhyata', title: 'Kya Yehi Sabhyata', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521820/DSC_0236_g3efgo.jpg', alt: 'A young student performing during a school talent show' },
-  { id: 'stage-setup', label: 'Stage Setup', title: 'Stage Setup', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony' },
+  { id: 'annual-functions', label: 'Annual Functions', title: 'Annual Functions', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521728/DSC_0278_fx912k.jpg', alt: 'Students performing on a professionally lit stage during a school annual day' },
+  { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students performing a colourful cultural dance during a school festival' },
+  { id: 'makings', label: 'Makings', title: 'Makings', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students participating in an energetic outdoor school sports event' },
+  { id: 'theatre-workshops', label: 'Theatre Workshops', title: 'Theatre Workshops', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521820/DSC_0236_g3efgo.jpg', alt: 'A young student performing during a school talent show' },
+  { id: 'teacher-masterclass', label: 'Teacher Masterclass', title: 'Teacher Masterclass', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony' },
 ];
 const tabOrder = events;
 
