@@ -141,6 +141,17 @@
   padding: clamp(30px, 6vw, 60px) clamp(24px, 5vw, 60px);
 }
 
+.gallery-lightbox__description {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5d5856;
+  letter-spacing: 0.03em;
+}
+
 /* Loading Status */
 .gallery-grid-status {
   width: 100%;

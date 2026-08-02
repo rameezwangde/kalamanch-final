@@ -4,12 +4,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './GalleryGrid.css';
 
 const ALBUM_CONFIGS = [
-  { id: 'annual', title: 'Annual Functions', tag: 'kalamanch-gallery' },
-  { id: 'chalta', title: 'Chalta Purja', tag: 'Chalta Purja' },
-  { id: 'ghera', title: 'Ghera', tag: 'Ghera' },
-  { id: 'kya-yehi', title: 'Kya Yehi Hai Sabhyata', tag: 'Kya Yehi Hai Sabhyata' },
-  { id: 'stage-setup', title: 'Stage Setup', tag: 'Stage Setup' },
-  { id: 'workshops', title: 'Workshops', tag: 'Workshops' },
+  { id: 'annual', title: 'Annual Functions', tag: 'kalamanch-gallery', description: 'Experience the grandeur of our school Annual Functions. We manage everything from stunning stage designs to flawless performances, ensuring a memorable night for students and parents alike. Our expert team at Kalamanch meticulously orchestrates every detail, transforming ordinary school grounds into spectacular theatrical arenas. Browse through these captured moments to see the scale, energy, and unparalleled panache we bring to every celebration.' },
+  { id: 'chalta', title: 'Chalta Purja', tag: 'Chalta Purja', description: 'A captivating theatrical performance that blends humor, emotion, and spectacular acting. See how Kalamanch brings stories to life with intricate set designs and expert direction. This album showcases the sheer talent of the performers and the high production value that defines our theatrical events. From costume design to atmospheric lighting, every element is curated to immerse the audience completely in the narrative.' },
+  { id: 'ghera', title: 'Ghera', tag: 'Ghera', description: 'Immerse yourself in the world of \'Ghera\'. This production highlights our dedication to student-centric performances, complete with traditional elements and modern technical setups. The vivid imagery in this album captures the intense emotions and dramatic flair that our directors coax out of every cast member. It stands as a shining example of how we seamlessly merge cultural storytelling with state-of-the-art event execution.' },
+  { id: 'kya-yehi', title: 'Kya Yehi Hai Sabhyata', tag: 'Kya Yehi Hai Sabhyata', description: 'Explore the thought-provoking play \'Kya Yehi Hai Sabhyata\', a prime example of our culturally rich and sophisticated theatrical event productions. This gallery highlights the compelling stage presence and dynamic blocking that keeps audiences on the edge of their seats. Our commitment to excellence is visible in every frame, demonstrating our ability to handle complex themes with maturity and artistic brilliance.' },
+  { id: 'stage-setup', title: 'Stage Setup', tag: 'Stage Setup', description: 'A behind-the-scenes look at our meticulous stage setups. From lighting and sound to elaborate backdrops, see how we build the foundation for an unforgettable event. Kalamanch takes pride in its technical prowess, utilizing premium sound systems, dynamic LED lighting, and custom-fabricated props. These photos reveal the hard work and precision engineering required to create the flawless aesthetic that our clients expect.' },
+  { id: 'workshops', title: 'Workshops', tag: 'Workshops', description: 'Discover our engaging and educational workshops. We focus on building confidence, teaching theatrical nuances, and developing the overall personality of students through performance arts. Led by our artistic director Mayank Jain and a team of seasoned professionals, these sessions are designed to break down stage fear and foster creativity. Look through these images to witness the transformative journey and genuine joy of our participants.' },
 ];
 
 export default function GalleryGrid() {
@@ -163,6 +163,11 @@ export default function GalleryGrid() {
             </div>
             
             <div className="gallery-lightbox__content">
+              {activeAlbum.description && (
+                <p className="gallery-lightbox__description">
+                  {activeAlbum.description}
+                </p>
+              )}
               <div className="gallery-masonry">
                 {activeAlbum.images.map((img) => {
                   const imgUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`;
