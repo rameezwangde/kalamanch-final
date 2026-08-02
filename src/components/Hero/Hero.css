@@ -271,12 +271,7 @@
 
 @media (max-width: 767px) {
   .hero {
-    min-height: 100svh; /* Ensure it stays full height */
-  }
-
-  .hero-video {
-    object-fit: contain;
-    background-color: #000; /* Add black background to blend with video letterboxing */
+    min-height: 620px;
   }
 
   .hero-header {
