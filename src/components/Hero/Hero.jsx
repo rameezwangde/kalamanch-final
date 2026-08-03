@@ -67,6 +67,8 @@ export default function Hero() {
           playsInline
           preload="auto"
           aria-hidden="true"
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
         >
           <source src="https://res.cloudinary.com/crw5jo8x/video/upload/v1785762834/IMG_0738_compressed_fqdcy9.mp4" type="video/mp4" />
         </video>
