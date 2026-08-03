@@ -5,10 +5,10 @@ import './MomentsCollage.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const baseImages = [
-  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521435/DSC01367_euhkac.jpg', alt: 'Students performing during a warmly lit school annual-day celebration', delay: 0 },
-  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/v1785521377/0M6A2787_pkismx.jpg', alt: 'Mayank Jain conducting a workshop at Birla Science Centre', delay: 0.1 },
-  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521378/CL_3_aswrae.jpg', alt: 'Group of students performing a colourful cultural dance at a school event', delay: 0.2 },
-  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521383/DSC00961_mkh8e2.jpg', alt: 'Students celebrating during an outdoor school sports and activity day', delay: 0.3 },
+  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v1785521435/DSC01367_euhkac.jpg', alt: 'Students performing during a warmly lit school annual-day celebration', delay: 0 },
+  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v1785521377/0M6A2787_pkismx.jpg', alt: 'Mayank Jain conducting a workshop at Birla Science Centre', delay: 0.1 },
+  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v1785521378/CL_3_aswrae.jpg', alt: 'Group of students performing a colourful cultural dance at a school event', delay: 0.2 },
+  { src: 'https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v1785521383/DSC00961_mkh8e2.jpg', alt: 'Students celebrating during an outdoor school sports and activity day', delay: 0.3 },
 ];
 
 const ALBUM_CONFIGS = [
@@ -73,7 +73,7 @@ export default function MomentsCollage() {
         
         // Take 15 extra images
         const extraImages = allFetched.slice(0, 15).map((img, i) => ({
-          src: `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`,
+          src: `https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`,
           alt: 'Gallery Event Photo',
           delay: (i % 4) * 0.1,
           isLoading: false

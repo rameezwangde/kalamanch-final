@@ -77,7 +77,7 @@ export default function GalleryGrid() {
     <section className="gallery-albums-section">
       <div className="gallery-masonry">
         {allImages.map((img) => {
-          const imgUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`;
+          const imgUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`;
           return (
             <motion.div 
               key={img.public_id} 
