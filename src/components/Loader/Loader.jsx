@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Loader.css';
 
-const Loader = () => {
+const Loader = React.memo(() => {
   return (
     <motion.div 
       className="kalamanch-loader-wrapper"
@@ -23,6 +23,6 @@ const Loader = () => {
       </div>
     </motion.div>
   );
-};
+});
 
 export default Loader;

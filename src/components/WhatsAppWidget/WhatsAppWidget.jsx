@@ -1,7 +1,8 @@
+import React from 'react';
 import { Mail } from 'lucide-react';
 import './WhatsAppWidget.css';
 
-export default function WhatsAppWidget() {
+const WhatsAppWidget = React.memo(function WhatsAppWidget() {
   return (
     <div className="floating-widgets">
       <a 
@@ -26,4 +27,6 @@ export default function WhatsAppWidget() {
       </a>
     </div>
   );
-}
+});
+
+export default WhatsAppWidget;

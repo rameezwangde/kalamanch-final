@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import './SiteFooter.css';
 
@@ -13,7 +14,7 @@ const groups = [
   { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '/promise' }, { label: 'Our Team', href: '/team' }, { label: 'Our Moments', href: '/moments' }] },
 ];
 
-export default function SiteFooter() {
+const SiteFooter = React.memo(function SiteFooter() {
   const reduceMotion = useReducedMotion();
   const reveal = (delay, y = 22) => reduceMotion ? {} : {
     initial: { opacity: 0, y },
@@ -87,7 +88,9 @@ export default function SiteFooter() {
       </div>
     </footer>
   );
-}
+});
+
+export default SiteFooter;
 function FacebookIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.3V6.5c0-.8.5-1 1-1h2.5V2.2L14.8 2c-3.1 0-4.7 1.8-4.7 5v1.3H7v4h3.1V22h4.1v-9.7h3.1l.5-4h-3.6Z" fill="currentColor" stroke="none" /></svg>;
 }
