@@ -2,6 +2,8 @@ import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import SiteFooter from './components/SiteFooter/SiteFooter';
 import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget';
+import Loader from './components/Loader/Loader';
+
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -27,7 +29,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Suspense fallback={<div style={{ height: '100vh', display: 'grid', placeItems: 'center', background: '#3b2823', color: '#fff' }}>Loading Kalamanch...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
