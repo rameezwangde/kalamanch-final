@@ -37,7 +37,7 @@ export default function Gallery() {
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          Explore our portfolio of expertly curated events across New Delhi and beyond. From breathtaking school annual functions and theatrical plays to vibrant college cultural fests, our gallery showcases the passion, precision, and panache that Kalamanch brings to every stage. We pride ourselves on delivering premium event management services that turn concepts into unforgettable experiences.
+          Explore our portfolio of expertly curated events across New Delhi and beyond. From breathtaking school annual functions and theatrical plays to vibrant college cultural fests, our gallery showcases the passion, precision, and panache that KalaManch brings to every stage. We pride ourselves on delivering premium event management services that turn concepts into unforgettable experiences.
         </motion.p>
       </div>
 

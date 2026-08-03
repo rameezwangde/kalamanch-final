@@ -25,7 +25,7 @@ const VIDEO_DATA = [
   },
   {
     id: 'gIxWUmyp21c',
-    title: 'Kalamanch Event Showcase',
+    title: 'KalaManch Event Showcase',
     description: 'Experience another incredible event showcase brought to life by <strong>KalaManch</strong>. Witness spectacular stage production and masterful storytelling.',
   },
   {

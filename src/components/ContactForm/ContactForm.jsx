@@ -72,10 +72,10 @@ export default function ContactForm() {
       <motion.div className="contact-privacy" {...(reduceMotion ? {} : reveal)}>
         <h3>Privacy Policy</h3>
         <p>
-          Our Website gives you an option of giving us contact information (like name, e-mail id and telephone number) for the purposes of gathering information on people interested in the business of Kalamanch. Any communication between you and the website, along with queries and posts on our website are also included in this. Certain information, such as your name, e-mail addresses, is collected in order to, among other things; verify your identity and to provide information for the leads generated.
+          Our Website gives you an option of giving us contact information (like name, e-mail id and telephone number) for the purposes of gathering information on people interested in the business of KalaManch. Any communication between you and the website, along with queries and posts on our website are also included in this. Certain information, such as your name, e-mail addresses, is collected in order to, among other things; verify your identity and to provide information for the leads generated.
         </p>
         <p>
-          To the extent possible, we provide you the option of not divulging any specific information that you wish for us not to collect, store or use. You may also choose not to use a particular service or feature on the Site, and opt out of any non-essential communications from the Kalamanch. Further, transacting over the internet has inherent risks which can only be avoided by following security practices such as ensuring that Your e-mail address and profile information is confidential. Any information sent to Us by Your e-mail address which has not been sent by You should be notified to our customer care team at the earliest.
+          To the extent possible, we provide you the option of not divulging any specific information that you wish for us not to collect, store or use. You may also choose not to use a particular service or feature on the Site, and opt out of any non-essential communications from the KalaManch. Further, transacting over the internet has inherent risks which can only be avoided by following security practices such as ensuring that Your e-mail address and profile information is confidential. Any information sent to Us by Your e-mail address which has not been sent by You should be notified to our customer care team at the earliest.
         </p>
       </motion.div>
     </section>

@@ -35,7 +35,7 @@ export default function AboutWelcome() {
             className="about-welcome__eyebrow"
             {...(reduceMotion ? {} : revealText(0))}
           >
-            Welcome to Kalamanch
+            Welcome to KalaManch
           </motion.div>
           <motion.h2 
             id="about-welcome-title"
@@ -48,7 +48,7 @@ export default function AboutWelcome() {
             className="about-welcome__text"
             {...(reduceMotion ? {} : revealText(0.2))}
           >
-            Kalamanch is a leading event management company based in New Delhi, specializing in curating impeccable, high-impact experiences. We offer a diverse portfolio of services, from spectacular Annual Functions for Schools to vibrant Cultural Fests and Shows for Colleges. By seamlessly blending traditional cultural values with state-of-the-art technical facilities, we transform every event into a flamboyant celebration, delivering the perfect balance of panache and pizzazz.
+            KalaManch is a leading event management company based in New Delhi, specializing in curating impeccable, high-impact experiences. We offer a diverse portfolio of services, from spectacular Annual Functions for Schools to vibrant Cultural Fests and Shows for Colleges. By seamlessly blending traditional cultural values with state-of-the-art technical facilities, we transform every event into a flamboyant celebration, delivering the perfect balance of panache and pizzazz.
           </motion.p>
         </div>
 
@@ -58,7 +58,7 @@ export default function AboutWelcome() {
         >
           <img 
             src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521374/_DSC1640_w0hiiq.jpg" 
-            alt="Vibrant cultural festival performance by Kalamanch" 
+            alt="Vibrant cultural festival performance by KalaManch" 
             className="about-welcome__image" 
             loading="lazy" 
           />

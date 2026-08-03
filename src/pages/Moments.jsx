@@ -6,14 +6,14 @@ export default function Moments() {
   const reduceMotion = useReducedMotion();
   
   useEffect(() => {
-    document.title = "Our Moments | Kalamanch Event Experiences";
+    document.title = "Our Moments | KalaManch Event Experiences";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Explore unforgettable moments captured at Kalamanch events. From school annual functions to grand theatrical performances, witness the magic we create.");
+      metaDescription.setAttribute("content", "Explore unforgettable moments captured at KalaManch events. From school annual functions to grand theatrical performances, witness the magic we create.");
     } else {
       const meta = document.createElement('meta');
       meta.name = "description";
-      meta.content = "Explore unforgettable moments captured at Kalamanch events. From school annual functions to grand theatrical performances, witness the magic we create.";
+      meta.content = "Explore unforgettable moments captured at KalaManch events. From school annual functions to grand theatrical performances, witness the magic we create.";
       document.head.appendChild(meta);
     }
     window.scrollTo(0, 0);
@@ -54,7 +54,7 @@ export default function Moments() {
             From the nervous excitement backstage before a school play to the roaring applause of a crowded college fest, these are the memories that fuel our passion. We capture the essence of every performance, ensuring that the spirit of the event lives on long after the lights go down.
           </p>
           <p>
-            Take a journey through some of our most memorable experiences. These moments highlight our commitment to excellence and showcase the unparalleled panache that Kalamanch brings to every stage we touch.
+            Take a journey through some of our most memorable experiences. These moments highlight our commitment to excellence and showcase the unparalleled panache that KalaManch brings to every stage we touch.
           </p>
         </motion.div>
       </section>

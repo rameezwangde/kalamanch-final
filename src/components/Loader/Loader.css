@@ -1,4 +1,4 @@
-.kalamanch-loader-wrapper {
+.KalaManch-loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-.kalamanch-loader-content {
+.KalaManch-loader-content {
   display: flex;
   flex-direction: column;
   align-items: center;

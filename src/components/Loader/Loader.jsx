@@ -5,12 +5,12 @@ import './Loader.css';
 const Loader = React.memo(() => {
   return (
     <motion.div 
-      className="kalamanch-loader-wrapper"
+      className="KalaManch-loader-wrapper"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className="kalamanch-loader-content">
+      <div className="KalaManch-loader-content">
         <div className="loader-spinner"></div>
         <motion.div 
           className="loader-text"
@@ -18,7 +18,7 @@ const Loader = React.memo(() => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Kalamanch
+          KalaManch
         </motion.div>
       </div>
     </motion.div>

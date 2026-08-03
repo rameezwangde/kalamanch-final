@@ -5,13 +5,14 @@ import './SiteFooter.css';
 const ease = [0.22, 1, 0.36, 1];
 const groups = [
   { title: 'Experiences', links: [
-    { label: 'Annual Functions', href: '/gallery?album=annual-functions' },
-    { label: 'Professional Shows', href: '/gallery?album=professional-shows' },
-    { label: 'Makings', href: '/gallery?album=makings' },
-    { label: 'Theatre Workshops', href: '/gallery?album=theatre-workshops' },
-    { label: 'Teacher Masterclass', href: '/gallery?album=teacher-masterclass' }
+    { label: 'Annual Functions', href: '/videos/annual-functions' },
+    { label: 'Professional Shows', href: '/videos/professional-shows' },
+    { label: 'Nukkad Natak', href: '/videos/nukkad-natak' },
+    { label: 'Makings', href: '/videos/makings' },
+    { label: 'Theatre Workshops', href: '/videos/theatre-workshops' },
+    { label: 'Teacher Masterclass', href: '/videos/teacher-masterclass' }
   ] },
-  { title: 'Kalamanch', links: [{ label: 'Our Promise', href: '/promise' }, { label: 'Our Team', href: '/team' }, { label: 'Our Moments', href: '/moments' }] },
+  { title: 'KalaManch', links: [{ label: 'Our Promise', href: '/promise' }, { label: 'Our Team', href: '/team' }, { label: 'Our Moments', href: '/moments' }] },
 ];
 
 const SiteFooter = React.memo(function SiteFooter() {
@@ -26,11 +27,11 @@ const SiteFooter = React.memo(function SiteFooter() {
   return (
     <footer className="site-footer" id="enquire">
       <div className="site-footer__inner">
-        <motion.a className="site-footer__wordmark" href="/" aria-label="Kalamanch home" {...reveal(0.05, 18)}>
-          <img src="/kalamanch-logo.jpg" alt="Kalamanch Theatre Production Company Logo" style={{ width: '140px', height: '140px', objectFit: 'contain', borderRadius: '50%' }} />
+        <motion.a className="site-footer__wordmark" href="/" aria-label="KalaManch home" {...reveal(0.05, 18)}>
+          <img src="/kalamanch-logo.jpg" alt="KalaManch Theatre Production Company Logo" style={{ width: '140px', height: '140px', objectFit: 'contain', borderRadius: '50%' }} />
         </motion.a>
 
-        <motion.div className="site-footer__trust" aria-label="Kalamanch values" {...reveal(0.15, 16)}>
+        <motion.div className="site-footer__trust" aria-label="KalaManch values" {...reveal(0.15, 16)}>
           <span>School Events</span>
           <span>Creative Production</span>
           <span>Student-Centred Experiences</span>
@@ -50,7 +51,7 @@ const SiteFooter = React.memo(function SiteFooter() {
             <h2>Useful Information</h2>
             <div className="site-footer__contact-item">
               <strong>Location</strong>
-              <p>Kalamanch<br/>B-6/235, Ist Floor, Rohini Sector 3 Delhi 110085</p>
+              <p>KalaManch<br/>B-6/235, Ist Floor, Rohini Sector 3 Delhi 110085</p>
             </div>
             <div className="site-footer__contact-item">
               <strong>Telephone</strong>
@@ -70,16 +71,16 @@ const SiteFooter = React.memo(function SiteFooter() {
             <h2>Connect</h2>
             <p>Follow the moments that make every celebration memorable.</p>
             <div className="site-footer__socials">
-              <a href="https://www.facebook.com/mayank.jain.007" target="_blank" rel="noreferrer" aria-label="Kalamanch on Facebook"><FacebookIcon /></a>
-              <a href="https://www.instagram.com/kalamanchevents/" target="_blank" rel="noreferrer" aria-label="Kalamanch on Instagram"><InstagramIcon /></a>
-              <a href="https://www.linkedin.com/in/mayank-jain-kalamanch-founder/" target="_blank" rel="noreferrer" aria-label="Kalamanch on LinkedIn"><LinkedinIcon /></a>
-              <a href="https://www.youtube.com/@MayankJainKalaManch" target="_blank" rel="noreferrer" aria-label="Kalamanch on YouTube"><YoutubeIcon /></a>
+              <a href="https://www.facebook.com/mayank.jain.007" target="_blank" rel="noreferrer" aria-label="KalaManch on Facebook"><FacebookIcon /></a>
+              <a href="https://www.instagram.com/KalaManchevents/" target="_blank" rel="noreferrer" aria-label="KalaManch on Instagram"><InstagramIcon /></a>
+              <a href="https://www.linkedin.com/in/mayank-jain-KalaManch-founder/" target="_blank" rel="noreferrer" aria-label="KalaManch on LinkedIn"><LinkedinIcon /></a>
+              <a href="https://www.youtube.com/@MayankJainKalaManch" target="_blank" rel="noreferrer" aria-label="KalaManch on YouTube"><YoutubeIcon /></a>
             </div>
           </div>
         </motion.div>
 
         <motion.div className="site-footer__bottom" {...reveal(0.35, 14)}>
-          <p>© 2026 Kalamanch. All Rights Reserved.</p>
+          <p>© 2026 KalaManch. All Rights Reserved.</p>
           <div>
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms &amp; Conditions</a>

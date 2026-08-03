@@ -29,12 +29,12 @@ export default function PromiseSection() {
               {...reveal(0.15, { y: 28 })}
               transition={reduceMotion ? undefined : { duration: 1.15, delay: 0.15, ease }}
             >
-              Kalamanch
+              KalaManch
             </motion.div>
             <motion.h2
               className="promise-serif"
               id="promise-heading"
-              aria-label="Kalamanch is where talent shines"
+              aria-label="KalaManch is where talent shines"
               {...reveal(0.27, { y: 34 })}
               transition={reduceMotion ? undefined : { duration: 1.1, delay: 0.27, ease }}
             >
@@ -45,7 +45,7 @@ export default function PromiseSection() {
         </div>
         <div className="promise-copy">
           <motion.p {...reveal(0.38, { y: 22 })}>
-            Led by Founder & Creative Head Mayank Jain—a nationally acclaimed theatre expert and NSD professional—Kalamanch is a premier hub for artistic innovation. With deep roots in Mandi House and the Natya Ballet Centre, we fuse music, dance drama, and performance arts to deliver high-quality theatre productions, educational workshops, and cultural events that inspire diverse audiences.
+            Led by Founder & Creative Head Mayank Jain—a nationally acclaimed theatre expert and NSD professional—KalaManch is a premier hub for artistic innovation. With deep roots in Mandi House and the Natya Ballet Centre, we fuse music, dance drama, and performance arts to deliver high-quality theatre productions, educational workshops, and cultural events that inspire diverse audiences.
           </motion.p>
           <motion.div
             className="promise-signature"
@@ -54,7 +54,7 @@ export default function PromiseSection() {
             Mayank Jain
           </motion.div>
           <motion.a className="promise-link" href="#about" {...reveal(0.5, { x: -15 })}>
-            <span>Discover Kalamanch</span>
+            <span>Discover KalaManch</span>
             <span className="promise-link-line" aria-hidden="true" />
           </motion.a>
         </div>

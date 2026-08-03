@@ -29,12 +29,12 @@ export default function ArtisticDirector() {
               {...reveal(0.15, { y: 28 })}
               transition={reduceMotion ? undefined : { duration: 1.15, delay: 0.15, ease }}
             >
-              Kalamanch
+              KalaManch
             </motion.div>
             <motion.h2
               className="artistic-serif"
               id="artistic-heading"
-              aria-label="Kalamanch is where talent shines"
+              aria-label="KalaManch is where talent shines"
               {...reveal(0.27, { y: 34 })}
               transition={reduceMotion ? undefined : { duration: 1.1, delay: 0.27, ease }}
             >

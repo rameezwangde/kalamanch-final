@@ -35,9 +35,9 @@ export default function PageHeader() {
           <span className="menu-label">Menu</span>
         </button>
 
-        <a className="wordmark" href="/" aria-label="Kalamanch home">
-          <span className="wordmark-name">Kalamanch</span>
-          <span className="wordmark-subtitle">Event Experiences</span>
+        <a className="wordmark" href="/" aria-label="KalaManch home">
+          <span className="wordmark-name">KalaManch</span>
+          <span className="wordmark-subtitle">Theatre Production Company</span>
         </a>
 
 

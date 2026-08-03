@@ -12,7 +12,7 @@ const baseImages = [
 ];
 
 const ALBUM_CONFIGS = [
-  { tag: 'kalamanch-gallery' },
+  { tag: 'KalaManch-gallery' },
   { tag: 'Chalta Purja' },
   { tag: 'Ghera' },
   { tag: 'Kya Yehi Hai Sabhyata' },

@@ -28,18 +28,18 @@ export default function TeamStorySection() {
               The Heart of<br />Every Celebration...
             </motion.h2>
             <div className="team-story__copy">
-              <motion.p variants={itemVariants}>Behind every Kalamanch experience is a team that understands how much a school event truly means. We work closely with educators, students and families to transform ideas into celebrations filled with confidence, creativity and joy.</motion.p>
+              <motion.p variants={itemVariants}>Behind every KalaManch experience is a team that understands how much a school event truly means. We work closely with educators, students and families to transform ideas into celebrations filled with confidence, creativity and joy.</motion.p>
               <motion.p variants={itemVariants}>From the first rehearsal to the final applause, every detail is handled with care — so every student feels seen, supported and proud to take the stage.</motion.p>
             </div>
             <motion.a className="team-story__link" href="#team" variants={itemVariants}>
-              <span>Meet the Kalamanch Team</span>
+              <span>Meet the KalaManch Team</span>
               <span className="team-story__link-line" aria-hidden="true" />
             </motion.a>
           </div>
         </motion.div>
 
         <motion.div className="team-story__image-wrapper" initial={reduceMotion ? false : { opacity: 0, scale: 1.04 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1.25, ease }}>
-          <motion.img style={{ y: reduceMotion ? 0 : smoothImageY }} src="/images/kalamanch-team-school-event.jpg" alt="Kalamanch team supporting students during a school event" />
+          <motion.img style={{ y: reduceMotion ? 0 : smoothImageY }} src="/images/kalamanch-team-school-event.jpg" alt="KalaManch team supporting students during a school event" />
         </motion.div>
       </div>
     </section>

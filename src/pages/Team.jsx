@@ -6,14 +6,14 @@ export default function Team() {
   const reduceMotion = useReducedMotion();
   
   useEffect(() => {
-    document.title = "Our Team | Kalamanch Event Experiences";
+    document.title = "Our Team | KalaManch Event Experiences";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Meet the creative minds and expert event managers behind Kalamanch. Our team is dedicated to producing high-quality theatrical events and cultural fests.");
+      metaDescription.setAttribute("content", "Meet the creative minds and expert event managers behind KalaManch. Our team is dedicated to producing high-quality theatrical events and cultural fests.");
     } else {
       const meta = document.createElement('meta');
       meta.name = "description";
-      meta.content = "Meet the creative minds and expert event managers behind Kalamanch. Our team is dedicated to producing high-quality theatrical events and cultural fests.";
+      meta.content = "Meet the creative minds and expert event managers behind KalaManch. Our team is dedicated to producing high-quality theatrical events and cultural fests.";
       document.head.appendChild(meta);
     }
     window.scrollTo(0, 0);
@@ -48,7 +48,7 @@ export default function Team() {
            viewport={{ once: true, amount: 0.1 }}
         >
           <p style={{ marginBottom: '24px' }}>
-            The Kalamanch team is a collective of passionate artists, seasoned directors, and expert event managers who share a singular vision: to create magical, unforgettable experiences. Led by our visionary founder, Mayank Jain, our team brings decades of professional theatrical experience to every project.
+            The KalaManch team is a collective of passionate artists, seasoned directors, and expert event managers who share a singular vision: to create magical, unforgettable experiences. Led by our visionary founder, Mayank Jain, our team brings decades of professional theatrical experience to every project.
           </p>
           <p style={{ marginBottom: '24px' }}>
             From creative scriptwriters and talented choreographers to technical directors and stage designers, each member of our crew plays a vital role in bringing stories to life. We pride ourselves on our collaborative spirit and our ability to seamlessly blend different artistic disciplines.

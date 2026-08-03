@@ -32,7 +32,7 @@ export default function VideoModal({ isOpen, onClose }) {
           className="video-modal"
           role="dialog"
           aria-modal="true"
-          aria-label="Kalamanch showreel"
+          aria-label="KalaManch showreel"
           initial={reduceMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

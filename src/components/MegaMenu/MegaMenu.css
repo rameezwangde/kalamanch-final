@@ -85,7 +85,7 @@
   transition: color 0.3s ease;
 }
 
-/* Hover effect replicating the screenshot's underline style but with Kalamanch gold/sand */
+/* Hover effect replicating the screenshot's underline style but with KalaManch gold/sand */
 .mega-menu-sidebar__item a::after {
   content: '';
   position: absolute;
@@ -93,7 +93,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #8c7e6b; /* Kalamanch sand/gold */
+  background-color: #8c7e6b; /* KalaManch sand/gold */
   transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 

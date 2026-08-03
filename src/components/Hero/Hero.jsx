@@ -49,16 +49,16 @@ export default function Hero() {
         </button>
 
 
-        <a className="wordmark" href="/" aria-label="Kalamanch home">
-          <span className="wordmark-name">Kalamanch</span>
-          <span className="wordmark-subtitle">Event Experiences</span>
+        <a className="wordmark" href="/" aria-label="KalaManch home">
+          <span className="wordmark-name">KalaManch</span>
+          <span className="wordmark-subtitle">Theatre Production Company</span>
         </a>
 
 
       </motion.header>
 
-      <section className="hero" aria-label="Kalamanch event experiences">
-        {/* Replace this placeholder video with the final Kalamanch event showreel. */}
+      <section className="hero" aria-label="KalaManch event experiences">
+        {/* Replace this placeholder video with the final KalaManch event showreel. */}
         <video
           className="hero-video"
           autoPlay

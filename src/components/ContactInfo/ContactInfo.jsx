@@ -68,19 +68,19 @@ export default function ContactInfo() {
       <div className="contact-map-container">
         <div className="map-info-card">
           <div className="map-info-text">
-            <h3>Kalamanch</h3>
+            <h3>KalaManch</h3>
             <p>B-6/235, 1st Floor, Sector 3,<br/>Rohini, Delhi, 110085, India</p>
             <div className="map-info-rating">
-              4.9 <span className="star">★</span> <a href="https://www.google.com/maps/place/Kalamanch/@28.7186,77.1084,15z" target="_blank" rel="noopener noreferrer" style={{color: '#1a73e8', textDecoration: 'none'}}>(76)</a>
+              4.9 <span className="star">★</span> <a href="https://www.google.com/maps/place/KalaManch/@28.7186,77.1084,15z" target="_blank" rel="noopener noreferrer" style={{color: '#1a73e8', textDecoration: 'none'}}>(76)</a>
             </div>
           </div>
           <div className="map-info-actions">
-            <a href="https://www.google.com/maps/place/Kalamanch/@28.7186,77.1084,15z" target="_blank" rel="noopener noreferrer" className="map-action-btn" title="View larger map">
+            <a href="https://www.google.com/maps/place/KalaManch/@28.7186,77.1084,15z" target="_blank" rel="noopener noreferrer" className="map-action-btn" title="View larger map">
               <svg viewBox="0 0 24 24">
                 <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
               </svg>
             </a>
-            <a href="https://www.google.com/maps/dir//Kalamanch,+B-6%2F235,+1st+Floor,+Sector+3,+Rohini,+Delhi,+110085,+India" target="_blank" rel="noopener noreferrer" className="map-action-btn" title="Directions" style={{background: '#1a73e8', color: '#fff'}}>
+            <a href="https://www.google.com/maps/dir//KalaManch,+B-6%2F235,+1st+Floor,+Sector+3,+Rohini,+Delhi,+110085,+India" target="_blank" rel="noopener noreferrer" className="map-action-btn" title="Directions" style={{background: '#1a73e8', color: '#fff'}}>
               <svg viewBox="0 0 24 24">
                 <path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.39.39-1.02 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
               </svg>
@@ -88,11 +88,11 @@ export default function ContactInfo() {
           </div>
         </div>
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.014299482811!2d77.1084!3d28.7186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d014389052ea7%3A0x6b405f63116eb617!2sKalamanch!5e0!3m2!1sen!2sin!4v1689251034125!5m2!1sen!2sin" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.014299482811!2d77.1084!3d28.7186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d014389052ea7%3A0x6b405f63116eb617!2sKalaManch!5e0!3m2!1sen!2sin!4v1689251034125!5m2!1sen!2sin" 
           allowFullScreen="" 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Kalamanch Office Location"
+          title="KalaManch Office Location"
         ></iframe>
       </div>
     </section>

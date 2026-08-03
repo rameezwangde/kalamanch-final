@@ -6,14 +6,14 @@ export default function Promise() {
   const reduceMotion = useReducedMotion();
   
   useEffect(() => {
-    document.title = "Our Promise | Kalamanch Event Experiences";
+    document.title = "Our Promise | KalaManch Event Experiences";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Discover the Kalamanch Promise. We are committed to delivering exceptional, high-quality event experiences that blend tradition with modern technology in New Delhi.");
+      metaDescription.setAttribute("content", "Discover the KalaManch Promise. We are committed to delivering exceptional, high-quality event experiences that blend tradition with modern technology in New Delhi.");
     } else {
       const meta = document.createElement('meta');
       meta.name = "description";
-      meta.content = "Discover the Kalamanch Promise. We are committed to delivering exceptional, high-quality event experiences that blend tradition with modern technology in New Delhi.";
+      meta.content = "Discover the KalaManch Promise. We are committed to delivering exceptional, high-quality event experiences that blend tradition with modern technology in New Delhi.";
       document.head.appendChild(meta);
     }
     window.scrollTo(0, 0);
@@ -48,13 +48,13 @@ export default function Promise() {
            viewport={{ once: true, amount: 0.1 }}
         >
           <p style={{ marginBottom: '24px' }}>
-            At Kalamanch, our promise is to consistently exceed expectations. We understand that every event is a unique reflection of your vision, whether it's a dynamic school annual day, a vibrant cultural fest, or a corporate milestone. We are dedicated to delivering not just an event, but a truly unforgettable experience.
+            At KalaManch, our promise is to consistently exceed expectations. We understand that every event is a unique reflection of your vision, whether it's a dynamic school annual day, a vibrant cultural fest, or a corporate milestone. We are dedicated to delivering not just an event, but a truly unforgettable experience.
           </p>
           <p style={{ marginBottom: '24px' }}>
             Our commitment is rooted in our meticulous attention to detail, our passion for the performing arts, and our drive for technical perfection. We promise to handle every aspect of your production with utmost care, ensuring seamless execution from the initial concept to the final curtain call.
           </p>
           <p>
-            When you choose Kalamanch, you are choosing a partner who values your moments as much as you do. We guarantee creativity, professionalism, and an unwavering dedication to making your celebration an absolute masterpiece.
+            When you choose KalaManch, you are choosing a partner who values your moments as much as you do. We guarantee creativity, professionalism, and an unwavering dedication to making your celebration an absolute masterpiece.
           </p>
         </motion.div>
       </section>

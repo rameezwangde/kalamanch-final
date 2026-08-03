@@ -129,7 +129,6 @@
   grid-column: 2;
   color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
   transition: opacity 300ms ease;
 }
 
@@ -156,6 +155,7 @@
   line-height: 1;
   letter-spacing: 0.48em;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .enquire-link {
