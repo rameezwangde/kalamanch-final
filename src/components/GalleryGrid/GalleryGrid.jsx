@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, useReducedMotion, AnimatePresence } from 'framer-motion';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
 import './GalleryGrid.css';
 
 const ALBUM_CONFIGS = [
@@ -17,11 +16,7 @@ export default function GalleryGrid() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // Tracks which album is currently open in the lightbox
-  const [activeAlbum, setActiveAlbum] = useState(null);
   const reduceMotion = useReducedMotion();
-  const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchAlbums() {
@@ -54,32 +49,6 @@ export default function GalleryGrid() {
     fetchAlbums();
   }, []);
 
-  // Update active album when albums or location.search changes
-  useEffect(() => {
-    if (albums.length > 0) {
-      const params = new URLSearchParams(location.search);
-      const albumId = params.get('album');
-      if (albumId) {
-        const targetAlbum = albums.find(a => a.id === albumId);
-        if (targetAlbum) {
-          setActiveAlbum(targetAlbum);
-        }
-      }
-    }
-  }, [albums, location.search]);
-
-  // Lock body scroll when lightbox is open
-  useEffect(() => {
-    if (activeAlbum) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [activeAlbum]);
-
   if (loading) {
     return (
       <div className="gallery-grid-status">
@@ -100,100 +69,34 @@ export default function GalleryGrid() {
     return null;
   }
 
+  const allImages = albums.flatMap(album => 
+    album.images.map(img => ({ ...img, albumTitle: album.title }))
+  );
+
   return (
     <section className="gallery-albums-section">
-      
-      {/* Grid of Album Cards */}
-      <div className="album-cards-grid">
-        {albums.map((album) => {
-          const coverImage = album.images[0];
-          if (!coverImage) return null;
-          
-          const coverUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${coverImage.version}/${coverImage.public_id}.${coverImage.format}`;
-
+      <div className="gallery-masonry">
+        {allImages.map((img) => {
+          const imgUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`;
           return (
             <motion.div 
-              key={album.id}
-              className="album-card"
-              onClick={() => setActiveAlbum(album)}
-              initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+              key={img.public_id} 
+              className="gallery-masonry-item"
+              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6 }}
             >
-              <div className="album-card__image-wrapper">
-                <img src={coverUrl} alt={`${album.title} Cover`} className="album-card__image" loading="lazy" />
-                <div className="album-card__overlay">
-                  <span className="album-card__view-text">View Gallery</span>
-                </div>
-              </div>
-              <div className="album-card__info">
-                <h3 className="album-card__title">{album.title}</h3>
-                <p className="album-card__count">{album.images.length} Photos</p>
-              </div>
+              <img 
+                src={imgUrl} 
+                alt={`${img.albumTitle} Event Experience`} 
+                loading="lazy" 
+                className="gallery-masonry-image"
+              />
             </motion.div>
           );
         })}
       </div>
-
-      {/* Full Screen Lightbox Modal */}
-      <AnimatePresence>
-        {activeAlbum && (
-          <motion.div 
-            className="gallery-lightbox"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="gallery-lightbox__header">
-              <h2 className="gallery-lightbox__title">{activeAlbum.title}</h2>
-              <button 
-                className="gallery-lightbox__close"
-                onClick={() => {
-                  setActiveAlbum(null);
-                  if (location.search) {
-                    navigate(location.pathname, { replace: true });
-                  }
-                }}
-                aria-label="Close Gallery"
-              >
-                ✕
-              </button>
-            </div>
-            
-            <div className="gallery-lightbox__content">
-              {activeAlbum.description && (
-                <p className="gallery-lightbox__description">
-                  {activeAlbum.description}
-                </p>
-              )}
-              <div className="gallery-masonry">
-                {activeAlbum.images.map((img) => {
-                  const imgUrl = `https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`;
-                  return (
-                    <motion.div 
-                      key={img.public_id} 
-                      className="gallery-masonry-item"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <img 
-                        src={imgUrl} 
-                        alt={`${activeAlbum.title} Event Experience`} 
-                        loading="lazy" 
-                        className="gallery-masonry-image"
-                      />
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }
