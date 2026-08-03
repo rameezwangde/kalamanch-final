@@ -109,7 +109,6 @@ export default function EventCollection() {
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => navigate(`/videos/${event.id}`)}
                 onKeyDown={(keyboardEvent) => handleTabKeyDown(keyboardEvent, tabIndex)}
-                style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
               >
                 <span className="event-tab__line" aria-hidden="true" />{event.label}
               </button>
