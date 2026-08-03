@@ -1,7 +1,22 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import PageHeader from '../components/PageHeader/PageHeader';
+
+function VideoTitle({ videoId, fallback }) {
+  const [title, setTitle] = useState(fallback);
+
+  useEffect(() => {
+    fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.title) setTitle(data.title);
+      })
+      .catch(() => {});
+  }, [videoId]);
+
+  return <>{title}</>;
+}
 
 const EVENT_VIDEOS_DATA = {
   'annual-functions': {
@@ -136,8 +151,8 @@ export default function EventVideos() {
               </iframe>
             </div>
             <div style={{ padding: '0 8px' }}>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em' }}>
-                {eventData.title} Part {index + 1}
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em', lineHeight: '1.4' }}>
+                <VideoTitle videoId={video.id} fallback={`${eventData.title} Part ${index + 1}`} />
               </h3>
             </div>
           </motion.div>
