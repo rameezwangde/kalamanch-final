@@ -28,9 +28,9 @@
   pointer-events: none;
   background:
     linear-gradient(180deg,
-      rgba(28, 17, 15, 0.2) 0%,
-      rgba(50, 29, 25, 0.14) 42%,
-      rgba(30, 18, 18, 0.34) 100%);
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.1) 42%,
+      rgba(0, 0, 0, 0.4) 100%);
 }
 
 .hero-overlay::before,
@@ -41,7 +41,7 @@
 }
 
 .hero-overlay::before {
-  background: rgba(112, 72, 58, 0.16);
+  background: rgba(0, 0, 0, 0.2);
   mix-blend-mode: multiply;
 }
 
