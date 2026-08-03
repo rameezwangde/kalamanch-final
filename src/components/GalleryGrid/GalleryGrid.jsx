@@ -32,7 +32,8 @@ export default function GalleryGrid() {
             }
             
             const data = await response.json();
-            return { ...config, images: data.resources || [] };
+            const filteredImages = (data.resources || []).filter(img => !img.public_id.toLowerCase().includes('collage'));
+            return { ...config, images: filteredImages };
           })
         );
         

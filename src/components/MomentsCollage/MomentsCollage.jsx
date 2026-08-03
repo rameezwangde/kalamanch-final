@@ -62,7 +62,7 @@ export default function MomentsCollage() {
             const response = await fetch(url);
             if (!response.ok) return [];
             const data = await response.json();
-            return data.resources || [];
+            return (data.resources || []).filter(img => !img.public_id.toLowerCase().includes('collage'));
           })
         );
         
