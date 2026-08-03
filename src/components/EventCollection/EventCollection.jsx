@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1];
 const events = [
   { id: 'annual-functions', label: 'Annual Functions', title: 'Annual Functions', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/v1785521411/Screenshot_2025-01-19_at_9.06.42_PM_beogso.png', alt: 'Students performing on a professionally lit stage during a school annual day', link: 'https://youtu.be/o38HCbjMe2g?si=7jWczrLaP9391XRs' },
   { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students performing a colourful cultural dance during a school festival', link: 'https://youtu.be/8kpE_Ml6Cd8?si=r3LwhNwwT7Bbu-K6' },
-  { id: 'nukkad-natak', label: 'Nukkad Natak', title: 'Nukkad Natak', image: '', alt: 'Nukkad Natak performance', link: '' },
+  { id: 'nukkad-natak', label: 'Nukkad Natak', title: 'Nukkad Natak', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/v1785783568/Nukkad_Natak_qyt11z.jpg', alt: 'Nukkad Natak performance', link: '' },
   { id: 'makings', label: 'Makings', title: 'Makings', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students participating in an energetic outdoor school sports event', link: 'https://youtu.be/asnBD7xijew?si=dc4fknt_Xku9sXEQ' },
   { id: 'theatre-workshops', label: 'Theatre Workshops', title: 'Theatre Workshops', image: '/theatre-workshops.png', alt: 'A young student performing during a school talent show', link: 'https://youtu.be/-_UbUcgIiDA?si=wEIZPQGo1sadQ9Dp' },
   { id: 'teacher-masterclass', label: 'Teacher Masterclass', title: 'Teacher Masterclass', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony', link: 'https://youtu.be/DnmEohT1zDo?si=OUp-0Xogw-M81onA' },
@@ -17,6 +17,7 @@ export default function EventCollection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const cardRefs = useRef({});
   const reduceMotion = useReducedMotion();
+  const navigate = useNavigate();
   const activeEvent = events[activeIndex];
   const visibleEvents = [
     events[activeIndex],
@@ -106,7 +107,7 @@ export default function EventCollection() {
                 role="tab"
                 aria-selected={isActive}
                 tabIndex={isActive ? 0 : -1}
-                onClick={() => selectEvent(event.id)}
+                onClick={() => navigate(`/videos/${event.id}`)}
                 onKeyDown={(keyboardEvent) => handleTabKeyDown(keyboardEvent, tabIndex)}
                 style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
               >
@@ -137,13 +138,13 @@ export default function EventCollection() {
   );
 }
 
+import { useNavigate } from 'react-router-dom';
+
 function EventCard({ event, isActive, onSelect, cardRef }) {
+  const navigate = useNavigate();
+
   const handleSelect = () => {
-    if (event.link) {
-      window.open(event.link, '_blank', 'noopener,noreferrer');
-    } else {
-      onSelect(event.id);
-    }
+    navigate(`/videos/${event.id}`);
   };
 
   const handleKeyDown = (keyboardEvent) => {

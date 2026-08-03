@@ -16,6 +16,7 @@ const Blogs = lazy(() => import('./pages/Blogs'));
 const PromisePage = lazy(() => import('./pages/Promise'));
 const Team = lazy(() => import('./pages/Team'));
 const Moments = lazy(() => import('./pages/Moments'));
+const EventVideos = lazy(() => import('./pages/EventVideos'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/promise" element={<PromisePage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/moments" element={<Moments />} />
+          <Route path="/videos/:eventId" element={<EventVideos />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
