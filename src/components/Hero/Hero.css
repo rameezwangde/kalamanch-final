@@ -133,6 +133,11 @@
   transition: opacity 300ms ease;
 }
 
+.hero-header:not(.hero-header--scrolled) .wordmark {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 
 .wordmark-name {
