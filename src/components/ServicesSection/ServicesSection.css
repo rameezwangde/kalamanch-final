@@ -41,7 +41,7 @@
 .service-item {
   display: flex;
   align-items: stretch;
-  min-height: 60vh;
+  min-height: 45vh;
 }
 
 .service-item:nth-child(even) {
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(60px, 10vw, 160px);
+  padding: clamp(40px, 6vw, 80px) clamp(40px, 8vw, 100px);
 }
 
 .service-name {
