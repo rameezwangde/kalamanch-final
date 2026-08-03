@@ -68,10 +68,10 @@ export default function Blogs() {
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.1 }}
         >
-          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521376/0E3A7745_xrvlk6.jpg" alt="Kalamanch Event Experience 1" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
-          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521374/_A3A7368_hajqnb.jpg" alt="Kalamanch Event Experience 2" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
-          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521382/DPS_EXP_2_pjpvm1.jpg" alt="Kalamanch Event Experience 3" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
-          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/v1785521821/DSC_0239_p3pfcb.jpg" alt="Kalamanch Event Experience 4" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521376/0E3A7745_xrvlk6.jpg" alt="Kalamanch Event Experience 1" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521374/_A3A7368_hajqnb.jpg" alt="Kalamanch Event Experience 2" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg" alt="Kalamanch Event Experience 3" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
+          <img src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521821/DSC_0239_p3pfcb.jpg" alt="Kalamanch Event Experience 4" loading="lazy" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} />
         </motion.div>
       </section>
     </main>
