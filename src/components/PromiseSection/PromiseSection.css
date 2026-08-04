@@ -134,8 +134,8 @@
 @media (max-width: 767px) {
   .promise-section { align-items: start; padding: 70px 22px 80px; }
   .promise-eyebrow { margin-bottom: 45px; font-size: 11px; line-height: 1.35; }
-  .promise-script { margin-bottom: 5px; font-size: clamp(72px, 23vw, 100px); line-height: 0.72; transform: translateX(-4px); }
-  .promise-serif { max-width: 100%; font-size: clamp(62px, 18vw, 84px); line-height: 0.82; }
+  .promise-script { margin-bottom: 5px; font-size: clamp(55px, 17vw, 90px); line-height: 0.72; transform: translateX(-4px); }
+  .promise-serif { max-width: 100%; font-size: clamp(50px, 15vw, 76px); line-height: 0.82; }
   .promise-serif span { white-space: normal; }
   .promise-serif span + span { margin-top: 10px; }
   .promise-copy p { max-width: 100%; font-size: 15px; line-height: 1.75; letter-spacing: 0.045em; }
@@ -144,8 +144,8 @@
 }
 
 @media (max-width: 389px) {
-  .promise-script { font-size: 70px; }
-  .promise-serif { font-size: 58px; }
+  .promise-script { font-size: 55px; }
+  .promise-serif { font-size: 46px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
