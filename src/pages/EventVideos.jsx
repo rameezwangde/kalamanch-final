@@ -18,6 +18,49 @@ function VideoTitle({ videoId, fallback }) {
   return <>{title}</>;
 }
 
+function YouTubeEmbed({ videoId, title }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div 
+      style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0,0,0,0.1)', cursor: 'pointer', backgroundColor: '#000' }}
+      onClick={() => setIsLoaded(true)}
+    >
+      {!isLoaded ? (
+        <>
+          <img 
+            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+            alt={title}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+            onLoad={(e) => {
+              if (e.target.naturalWidth === 120 && e.target.src.includes('maxresdefault')) {
+                e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+              }
+            }}
+            onError={(e) => {
+              if (e.target.src.includes('maxresdefault')) {
+                e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+              }
+            }}
+          />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '68px', height: '48px', backgroundColor: '#FF0000', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'background-color 0.2s ease' }} className="yt-play-btn">
+            <div style={{ width: 0, height: 0, borderTop: '10px solid transparent', borderBottom: '10px solid transparent', borderLeft: '16px solid white', marginLeft: '4px' }}></div>
+          </div>
+        </>
+      ) : (
+        <iframe 
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          title={title} 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin" 
+          allowFullScreen>
+        </iframe>
+      )}
+    </div>
+  );
+}
+
 const EVENT_VIDEOS_DATA = {
   'annual-functions': {
     title: 'Annual Functions',
@@ -52,7 +95,14 @@ const EVENT_VIDEOS_DATA = {
       { id: '-_UbUcgIiDA' },
       { id: 'sDpuCfeL83k' },
       { id: '2xhCmGuanws' },
-      { id: 'FUUFr9McV9c' }
+      { id: 'FUUFr9McV9c' },
+      { id: 'UH4yrfSa75M' },
+      { id: '3jWJZIP5vmo' },
+      { id: 'nAIgjcExGQM' },
+      { id: 'Y6Wn4NNo4X4' },
+      { id: 'FSRWn3KQaGQ' },
+      { id: 'bgUOgo5OUPE' },
+      { id: 'SqAkgnjYJuw' }
     ]
   },
   'professional-shows': {
@@ -146,17 +196,7 @@ export default function EventVideos() {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: (index % 10) * 0.1 }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0,0,0,0.1)' }}>
-              <iframe 
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={`${eventData.title} Video ${index + 1}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                loading="lazy"
-                allowFullScreen>
-              </iframe>
-            </div>
+            <YouTubeEmbed videoId={video.id} title={`${eventData.title} Video ${index + 1}`} />
             <div style={{ padding: '0 8px' }}>
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em', lineHeight: '1.4' }}>
                 <VideoTitle videoId={video.id} fallback={`${eventData.title} Part ${index + 1}`} />
