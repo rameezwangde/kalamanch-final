@@ -35,7 +35,14 @@ const EVENT_VIDEOS_DATA = {
       { id: 'Zmw9SQEklOw' },
       { id: 'JXOsd5xGC00' },
       { id: 'WgBg9bE6yUY' },
-      { id: 'mYg94Xh_PqE' }
+      { id: 'mYg94Xh_PqE' },
+      { id: 'DMGw4RgYj7g' },
+      { id: 'FHIVWReAimc' },
+      { id: 'NvLBBMWgKCY' },
+      { id: 'YCNARKbVtzE' },
+      { id: 'Lomah4oerIQ' },
+      { id: 'NcIKOu3usaM' },
+      { id: 'L55U4-wq7zw' }
     ]
   },
   'theatre-workshops': {
