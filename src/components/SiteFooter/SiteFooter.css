@@ -39,7 +39,7 @@
 
 @media (max-width: 600px) {
   .site-footer { min-height: auto; }
-  .site-footer__inner { min-height: auto; padding: 70px 22px 36px; }
+  .site-footer__inner { min-height: auto; padding: 30px 22px 36px; }
   .site-footer__wordmark-name { font-size: 50px; }
   .site-footer__wordmark-subtitle { margin-top: 13px; font-size: 9px; letter-spacing: 0.34em; }
   .site-footer__trust { flex-direction: column; gap: 12px; margin-top: 58px; text-align: center; line-height: 1.5; }
