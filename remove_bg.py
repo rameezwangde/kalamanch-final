@@ -42,8 +42,8 @@ def remove_black_floodfill(image_path, output_path):
         x, y = queue.pop(0)
         r, g, b, a = pixels[x, y]
         
-        # If it's a dark pixel, make it transparent and add neighbors
-        if r < 30 and g < 30 and b < 30:
+        # If it's a very dark pixel, make it transparent and add neighbors
+        if r < 15 and g < 15 and b < 15:
             pixels[x, y] = (0, 0, 0, 0)
             
             for nx, ny in [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]:
