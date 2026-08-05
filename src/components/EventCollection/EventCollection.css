@@ -292,6 +292,10 @@
     padding-top: 75px;
   }
 
+  .event-collection__nav-button {
+    display: none;
+  }
+
   .event-collection__intro {
     padding: 0;
   }
