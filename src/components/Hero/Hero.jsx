@@ -50,7 +50,10 @@ export default function Hero() {
 
 
         <a className="wordmark" href="/" aria-label="KalaManch home">
-          <span className="wordmark-name">KalaManch</span>
+          <div className="wordmark-top">
+            <img src="/kalamanch-logo.jpg" alt="KalaManch Logo" className="wordmark-logo" />
+            <span className="wordmark-name">KalaManch</span>
+          </div>
           <span className="wordmark-subtitle">Theatre Production Company</span>
         </a>
 

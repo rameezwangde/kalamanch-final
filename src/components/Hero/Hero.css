@@ -132,6 +132,19 @@
   transition: opacity 300ms ease;
 }
 
+.wordmark-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wordmark-logo {
+  height: clamp(30px, 3.5vw, 45px);
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .hero-header:not(.hero-header--scrolled) .wordmark {
   opacity: 0;
   pointer-events: none;
