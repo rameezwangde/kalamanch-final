@@ -74,8 +74,8 @@ export default function MomentsCollage() {
         // Shuffle to get random images
         allFetched = allFetched.sort(() => 0.5 - Math.random());
         
-        // Take 15 extra images
-        const extraImages = allFetched.slice(0, 15).map((img, i) => ({
+        // Take all images
+        const extraImages = allFetched.map((img, i) => ({
           src: `https://res.cloudinary.com/crw5jo8x/image/upload/w_800,c_limit,f_auto,q_auto/v${img.version}/${img.public_id}.${img.format}`,
           alt: 'Gallery Event Photo',
           delay: (i % 4) * 0.1,
@@ -162,17 +162,7 @@ export default function MomentsCollage() {
               );
             })}
             
-            {/* 20th Item: Creative Gallery Link */}
-            <motion.figure className="moment-image moment-image--link">
-              <Link to="/gallery" className="gallery-link-card">
-                <motion.div className="gallery-link-card__reveal" initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease }} viewport={{ once: true, amount: 0.22 }}>
-                  <h3>View Full Gallery</h3>
-                  <div className="gallery-link-card__icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                  </div>
-                </motion.div>
-              </Link>
-            </motion.figure>
+
           </div>
         </div>
       </div>
