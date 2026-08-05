@@ -47,7 +47,12 @@ export default function EventCollection() {
     document.getElementById(`event-tab-${nextEvent.id}`)?.focus();
   };
 
+  const isInitialMount = useRef(true);
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     if (!window.matchMedia('(max-width: 767px)').matches) return;
     cardRefs.current[activeEvent.id]?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
   }, [activeEvent.id, reduceMotion]);
