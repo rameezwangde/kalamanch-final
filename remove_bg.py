@@ -56,4 +56,4 @@ def remove_black_floodfill(image_path, output_path):
     print(f"Saved {output_path}")
 
 if __name__ == "__main__":
-    remove_black_floodfill("public/kalamanch-logo.jpg", "public/kalamanch-logo.png")
+    remove_black_floodfill("Screenshot_2026-07-27_at_11.52.46_PM_k1u4kw.png", "public/feature-image-nobg.png")

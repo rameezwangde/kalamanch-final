@@ -38,7 +38,7 @@ export default function FeatureImage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <img
-            src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785578331/Screenshot_2026-07-27_at_11.52.46_PM_k1u4kw.png"
+            src="/feature-image-nobg.png"
             alt="KalaManch Stage Performance"
             className="feature-image"
             loading="lazy"
