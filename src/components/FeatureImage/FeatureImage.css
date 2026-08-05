@@ -56,4 +56,9 @@
     gap: 40px;
     text-align: center;
   }
+  
+  .feature-image-wrapper {
+    margin-top: 0 !important;
+    transform: none !important;
+  }
 }
