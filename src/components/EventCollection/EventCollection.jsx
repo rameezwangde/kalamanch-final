@@ -53,9 +53,17 @@ export default function EventCollection() {
   }, [activeEvent.id, reduceMotion]);
 
   const tabsRef = useRef(null);
+  const galleryRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+
+  const scrollGallery = (direction) => {
+    if (galleryRef.current) {
+      const scrollAmount = 352; // approx card width + gap
+      galleryRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -117,18 +125,34 @@ export default function EventCollection() {
         </motion.div>
       </div>
 
-      <motion.div className="event-collection__gallery-desktop" {...reveal(0.42, 36)}>
-        <AnimatePresence initial={false} mode="popLayout">
-          {tabOrder.map((event) => (
-            <EventCard
-              event={event}
-              isActive={event.id === activeEvent.id}
-              key={event.id}
-              onSelect={selectEvent}
-            />
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="event-collection__gallery-wrapper">
+        <button 
+          className="event-collection__nav-button event-collection__nav-button--prev"
+          aria-label="Previous events"
+          onClick={() => scrollGallery('left')}
+        >
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button 
+          className="event-collection__nav-button event-collection__nav-button--next"
+          aria-label="Next events"
+          onClick={() => scrollGallery('right')}
+        >
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <motion.div className="event-collection__gallery-desktop" ref={galleryRef} {...reveal(0.42, 36)}>
+          <AnimatePresence initial={false} mode="popLayout">
+            {tabOrder.map((event) => (
+              <EventCard
+                event={event}
+                isActive={event.id === activeEvent.id}
+                key={event.id}
+                onSelect={selectEvent}
+              />
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
 
       <motion.div className="event-collection__gallery-mobile" {...reveal(0.42, 36)}>
         {tabOrder.map((event) => <EventCard event={event} isActive={event.id === activeEvent.id} key={event.id} onSelect={selectEvent} cardRef={(node) => { cardRefs.current[event.id] = node; }} />)}

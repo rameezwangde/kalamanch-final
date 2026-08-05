@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './MomentsCollage.css';
 
@@ -32,6 +32,7 @@ export default function MomentsCollage() {
   const [viewportMode, setViewportMode] = useState(getViewportMode);
   // Default 15 skeletons
   const [fetchedImages, setFetchedImages] = useState(Array.from({ length: 15 }).map(() => ({ isLoading: true })));
+  const [selectedIndex, setSelectedIndex] = useState(null);
   
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] });
@@ -40,12 +41,14 @@ export default function MomentsCollage() {
   const springConfig = { stiffness: 85, damping: 24, mass: 0.35 };
   const smoothTitleY = useSpring(titleY, springConfig);
 
-  // Generate parallax transforms for all 20 grid items
-  const yTransforms = Array.from({ length: 20 }).map((_, i) => {
-    const range = viewportMode === 'mobile' ? [20, -20] : (i % 2 === 0 ? [50, -50] : [90, -90]);
-    return useTransform(scrollYProgress, [0, 1], range);
-  });
-  const smoothValues = yTransforms.map(y => useSpring(y, springConfig));
+  const galleryRef = useRef(null);
+  
+  const scrollGallery = (direction) => {
+    if (galleryRef.current) {
+      const scrollAmount = galleryRef.current.offsetWidth * 0.75; // Scroll by 75% of container width
+      galleryRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const updateMode = () => setViewportMode(getViewportMode());
@@ -91,6 +94,21 @@ export default function MomentsCollage() {
   }, []);
 
   const displayImages = [...baseImages, ...fetchedImages];
+  const validImages = displayImages.filter(img => !img.isLoading);
+
+  const handlePrevLightbox = (e) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex(prev => (prev > 0 ? prev - 1 : validImages.length - 1));
+    }
+  };
+
+  const handleNextLightbox = (e) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex(prev => (prev < validImages.length - 1 ? prev + 1 : 0));
+    }
+  };
 
   return (
     <section className="moments-collage" ref={sectionRef} aria-labelledby="moments-collage-title">
@@ -101,38 +119,98 @@ export default function MomentsCollage() {
           </motion.span>
         </motion.h2>
 
-        <div className="moments-collage__canvas">
-          {displayImages.map((image, index) => {
-            if (image.isLoading) {
+        <div className="moments-collage__slider-wrapper">
+          <button 
+            className="moments-collage__nav-button moments-collage__nav-button--prev"
+            aria-label="Previous photos"
+            onClick={() => scrollGallery('left')}
+          >
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button 
+            className="moments-collage__nav-button moments-collage__nav-button--next"
+            aria-label="Next photos"
+            onClick={() => scrollGallery('right')}
+          >
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div className="moments-collage__canvas" ref={galleryRef}>
+            {displayImages.map((image, index) => {
+              if (image.isLoading) {
+                return (
+                  <motion.figure className="moment-image" key={`skeleton-${index}`}>
+                    <div className="moment-image__skeleton" style={{ width: '100%', height: '100%', background: '#eaeaea', animation: 'pulse 1.5s infinite ease-in-out' }}></div>
+                  </motion.figure>
+                );
+              }
+
               return (
-                <motion.figure className="moment-image" key={`skeleton-${index}`} style={{ y: reduceMotion ? 0 : smoothValues[index] }}>
-                  <div className="moment-image__skeleton" style={{ width: '100%', height: '100%', background: '#eaeaea', animation: 'pulse 1.5s infinite ease-in-out' }}></div>
+                <motion.figure 
+                  className="moment-image" 
+                  key={`${image.src}-${index}`}
+                  onClick={() => {
+                    const validIdx = validImages.findIndex(img => img.src === image.src);
+                    if (validIdx !== -1) setSelectedIndex(validIdx);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <motion.div className="moment-image__reveal" initial={reduceMotion ? false : { opacity: 0, clipPath: 'inset(15% 0 0 0)' }} whileInView={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }} transition={{ duration: 1.1, delay: reduceMotion ? 0 : image.delay, ease }} viewport={{ once: true, amount: 0.1 }}>
+                    <img src={image.src} alt={image.alt} loading="lazy" />
+                  </motion.div>
                 </motion.figure>
               );
-            }
-
-            return (
-              <motion.figure className="moment-image" key={`${image.src}-${index}`} style={{ y: reduceMotion ? 0 : smoothValues[index] }}>
-                <motion.div className="moment-image__reveal" initial={reduceMotion ? false : { opacity: 0, clipPath: 'inset(15% 0 0 0)' }} whileInView={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }} transition={{ duration: 1.1, delay: reduceMotion ? 0 : image.delay, ease }} viewport={{ once: true, amount: 0.1 }}>
-                  <img src={image.src} alt={image.alt} loading="lazy" />
+            })}
+            
+            {/* 20th Item: Creative Gallery Link */}
+            <motion.figure className="moment-image moment-image--link">
+              <Link to="/gallery" className="gallery-link-card">
+                <motion.div className="gallery-link-card__reveal" initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease }} viewport={{ once: true, amount: 0.22 }}>
+                  <h3>View Full Gallery</h3>
+                  <div className="gallery-link-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </div>
                 </motion.div>
-              </motion.figure>
-            );
-          })}
-          
-          {/* 20th Item: Creative Gallery Link */}
-          <motion.figure className="moment-image moment-image--link" style={{ y: reduceMotion ? 0 : smoothValues[displayImages.length] }}>
-            <Link to="/gallery" className="gallery-link-card">
-              <motion.div className="gallery-link-card__reveal" initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease }} viewport={{ once: true, amount: 0.22 }}>
-                <h3>View Full Gallery</h3>
-                <div className="gallery-link-card__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </div>
-              </motion.div>
-            </Link>
-          </motion.figure>
+              </Link>
+            </motion.figure>
+          </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedIndex !== null && validImages[selectedIndex] && (
+          <motion.div 
+            className="moments-collage__lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedIndex(null)}
+          >
+            <button className="moments-collage__lightbox-close" onClick={() => setSelectedIndex(null)} aria-label="Close image">
+              <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+            </button>
+
+            <button className="moments-collage__lightbox-nav moments-collage__lightbox-nav--prev" onClick={handlePrevLightbox} aria-label="Previous image">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button className="moments-collage__lightbox-nav moments-collage__lightbox-nav--next" onClick={handleNextLightbox} aria-label="Next image">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <motion.div 
+              className="moments-collage__lightbox-content"
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.95, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.95, x: -20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img src={validImages[selectedIndex].src.replace('w_800,c_limit,', '')} alt={validImages[selectedIndex].alt} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

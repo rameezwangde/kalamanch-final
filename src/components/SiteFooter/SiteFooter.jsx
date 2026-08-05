@@ -59,7 +59,10 @@ const SiteFooter = React.memo(function SiteFooter() {
             </div>
             <div className="site-footer__contact-item">
               <strong>Mail Us</strong>
-              <p><a href="mailto:kalamanch.co.in@gmail.com">kalamanch.co.in@gmail.com</a></p>
+              <p>
+                <a href="mailto:kalamanch.co.in@gmail.com">kalamanch.co.in@gmail.com</a><br/>
+                <span>info@kalamanchindia.com</span>
+              </p>
             </div>
             <div className="site-footer__contact-item">
               <strong>Website</strong>

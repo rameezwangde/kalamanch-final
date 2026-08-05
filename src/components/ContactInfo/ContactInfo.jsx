@@ -88,6 +88,7 @@ export default function ContactInfo() {
               <h3>E-Mail</h3>
               <p>
                 Email: <a href="mailto:kalamanch.co.in@gmail.com">kalamanch.co.in@gmail.com</a><br/>
+                Email: <span>info@kalamanchindia.com</span><br/>
                 Website: <a href="https://www.kalamanch.co.in" target="_blank" rel="noopener noreferrer">www.kalamanch.co.in</a>
               </p>
             </div>
