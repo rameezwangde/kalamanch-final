@@ -137,7 +137,15 @@ const EVENT_VIDEOS_DATA = {
       { id: 'plnwmrljtjw' },
       { id: 'TOR-3HWSwIU' },
       { id: 'J8v4oo0hD8U' },
-      { id: '0Vi4uvhw1t0' }
+      { id: '0Vi4uvhw1t0' },
+      { id: 'nXcbY7HZwXU' },
+      { id: 'LyhH1A96c2I' },
+      { id: 'VXyEY9C1gso' },
+      { id: 'tb6tzL34plc' },
+      { id: '752BT1YhdSE' },
+      { id: 'dIMGrv_tSVk' },
+      { id: 'clThMVKUj0k' },
+      { id: 'On6t7hHSK78' }
     ]
   },
   'teacher-masterclass': {
@@ -197,8 +205,8 @@ export default function EventVideos() {
             viewport={{ once: true, amount: 0.1 }}
           >
             <YouTubeEmbed videoId={video.id} title={`${eventData.title} Video ${index + 1}`} />
-            <div style={{ padding: '0 8px' }}>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em', lineHeight: '1.4' }}>
+            <div style={{ padding: '0 8px', overflow: 'hidden' }}>
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em', lineHeight: '1.4', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 <VideoTitle videoId={video.id} fallback={`${eventData.title} Part ${index + 1}`} />
               </h3>
             </div>

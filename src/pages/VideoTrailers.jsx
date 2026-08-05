@@ -178,8 +178,8 @@ export default function VideoTrailers() {
             viewport={{ once: true, amount: 0.1 }}
           >
             <YouTubeEmbed videoId={video.id} title={video.title} />
-            <div style={{ padding: '0 8px' }}>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em' }}>
+            <div style={{ padding: '0 8px', overflow: 'hidden' }}>
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '18px', fontWeight: 600, color: '#34302f', margin: '0 0 10px 0', letterSpacing: '0.02em', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 {video.title}
               </h3>
               <p 
