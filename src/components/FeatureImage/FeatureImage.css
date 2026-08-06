@@ -61,7 +61,7 @@
   
   .feature-image-wrapper {
     margin-top: 0 !important;
-    transform: none !important;
+    transform: scale(1.5) translateX(10%) !important;
   }
   
   .feature-content {
