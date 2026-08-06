@@ -110,7 +110,19 @@ const EVENT_VIDEOS_DATA = {
     videos: [
       { id: 'vG0mGPyc9Ow' },
       { id: '8kpE_Ml6Cd8' },
-      { id: 'txb4PRAIOqU' }
+      { id: 'txb4PRAIOqU' },
+      { id: 'F4F455W91lI' },
+      { id: 'i9Ba2iOCOl4' },
+      { id: 'ecindycG1KY' },
+      { id: '__g_FMxd0ZE' },
+      { id: 'udega1PAoWA' },
+      { id: '0RJJSHkKCtU' },
+      { id: '00lD2PvQB3Y' },
+      { id: 'pBPeg2PNdpc' },
+      { id: 'NiKbSTm1mqI' },
+      { id: 'N6zTyo2tEEU' },
+      { id: '3oeP1hJzQAk' },
+      { id: 'IOyU07DdzLU' }
     ]
   },
   'nukkad-natak': {
@@ -154,7 +166,18 @@ const EVENT_VIDEOS_DATA = {
       { id: 'RN62UpogU-0' },
       { id: 'Uwd8LUNdkRY' },
       { id: 'DnmEohT1zDo' },
-      { id: 'Y6Wn4NNo4X4' }
+      { id: 'Y6Wn4NNo4X4' },
+      { id: 'S8nquuELTnY' },
+      { id: 'FUUFr9McV9c' },
+      { id: 'mRntOkfYfJE' },
+      { id: 'Au52syRpy10' },
+      { id: 'eOJ6obhY5RM' },
+      { id: 'lifFnx0fqfc' },
+      { id: 'U3p7Q4wg8UU' },
+      { id: 'FKgrrFo0C6U' },
+      { id: 'B-CXfEdwQ6s' },
+      { id: 'uuANdMQ67Ng' },
+      { id: 'lVblkKBeGOs' }
     ]
   }
 };
