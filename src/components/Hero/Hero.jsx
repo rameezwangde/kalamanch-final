@@ -88,9 +88,6 @@ export default function Hero() {
         <main className="hero-content">
         </main>
 
-        <div className="hero-scroll-indicator" aria-hidden="true">
-          <span />
-        </div>
       </section>
 
 

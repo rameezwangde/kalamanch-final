@@ -19,6 +19,11 @@
   padding: 40px 50px;
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.mega-menu-sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .mega-menu-sidebar__header {

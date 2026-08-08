@@ -17,6 +17,15 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  pointer-events: none;
+}
+
+.hero-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-video::-webkit-media-controls-enclosure {
+  display: none !important;
 }
 
 .hero-overlay {
@@ -245,15 +254,7 @@
   transform: scale(1.05);
 }
 
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-}
+
 
 .menu-trigger:focus-visible,
 .enquire-link:focus-visible,
