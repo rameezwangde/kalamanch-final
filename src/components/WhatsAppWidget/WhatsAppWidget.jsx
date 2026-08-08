@@ -15,7 +15,7 @@ const WhatsAppWidget = React.memo(function WhatsAppWidget() {
         <Mail size={28} />
       </a>
       <a 
-        href="https://wa.me/919769402412" 
+        href="https://wa.me/919319966567" 
         target="_blank" 
         rel="noopener noreferrer"
         className="whatsapp-widget"

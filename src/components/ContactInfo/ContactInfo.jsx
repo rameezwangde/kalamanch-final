@@ -72,8 +72,8 @@ export default function ContactInfo() {
             <div className="contact-info-content">
               <h3>Phone</h3>
               <p>
-                Telephone: <a href="tel:+919911089917">+91-9911089917</a><br/>
-                Mobile: <a href="tel:+919769402412">+91-9769402412</a>
+                Telephone: <a href="tel:+919319966567">+91-9319966567</a><br/>
+                Mobile: <a href="tel:+919319966567">+91-9319966567</a>
               </p>
             </div>
           </motion.div>

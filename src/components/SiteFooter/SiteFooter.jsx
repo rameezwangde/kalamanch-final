@@ -64,7 +64,7 @@ const SiteFooter = React.memo(function SiteFooter() {
             </div>
             <div className="site-footer__contact-item">
               <strong>Telephone</strong>
-              <p>+91-9911089917, +91-9769402412</p>
+              <p>+91-9319966567</p>
             </div>
             <div className="site-footer__contact-item">
               <strong>Mail Us</strong>

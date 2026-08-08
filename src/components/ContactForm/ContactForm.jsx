@@ -15,7 +15,7 @@ export default function ContactForm() {
       return;
     }
     const text = `*New Enquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Message:* ${formData.message}`;
-    window.open(`https://wa.me/919769402412?text=${text}`, '_blank');
+    window.open(`https://wa.me/919319966567?text=${text}`, '_blank');
   };
 
   const handleEmail = (e) => {
