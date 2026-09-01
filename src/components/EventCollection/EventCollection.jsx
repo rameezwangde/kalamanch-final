@@ -4,12 +4,12 @@ import './EventCollection.css';
 
 const ease = [0.22, 1, 0.36, 1];
 const events = [
-  { id: 'annual-functions', label: 'Annual Functions', title: 'Annual Functions', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521411/Screenshot_2025-01-19_at_9.06.42_PM_beogso.png', alt: 'Students performing on a professionally lit stage during a school annual day', link: 'https://youtu.be/o38HCbjMe2g?si=7jWczrLaP9391XRs' },
-  { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521769/DSC_0021_cyzna8.jpg', alt: 'Students performing a colourful cultural dance during a school festival', link: 'https://youtu.be/8kpE_Ml6Cd8?si=r3LwhNwwT7Bbu-K6' },
-  { id: 'nukkad-natak', label: 'Nukkad Natak', title: 'Nukkad Natak', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785783568/Nukkad_Natak_qyt11z.jpg', alt: 'Nukkad Natak performance', link: '' },
-  { id: 'makings', label: 'Makings', title: 'Makings', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521950/14481926_10154705811154155_7749548386138963213_o_zifmoc.jpg', alt: 'Students participating in an energetic outdoor school sports event', link: 'https://youtu.be/asnBD7xijew?si=dc4fknt_Xku9sXEQ' },
-  { id: 'theatre-workshops', label: 'Theatre Workshops', title: 'Theatre Workshops', image: '/theatre-workshops.png', alt: 'A young student performing during a school talent show', link: 'https://youtu.be/-_UbUcgIiDA?si=wEIZPQGo1sadQ9Dp' },
-  { id: 'teacher-masterclass', label: 'Teacher Masterclass', title: 'Teacher Masterclass', image: 'https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521382/DPS_EXP_2_pjpvm1.jpg', alt: 'Students gathered in graduation attire during a school ceremony', link: 'https://youtu.be/DnmEohT1zDo?si=OUp-0Xogw-M81onA' },
+  { id: 'annual-functions', label: 'Annual Functions', title: 'Annual Functions', image: '/images/Screenshot 2025-01-19 at 9.06.42 PM.jpg', alt: 'Students performing on a professionally lit stage during a school annual day', link: 'https://youtu.be/o38HCbjMe2g?si=7jWczrLaP9391XRs' },
+  { id: 'professional-shows', label: 'Professional Shows', title: 'Professional Shows', image: '/images/GHERA_DSC_0021.JPG.jpg', alt: 'Students performing a colourful cultural dance during a school festival', link: 'https://youtu.be/8kpE_Ml6Cd8?si=r3LwhNwwT7Bbu-K6' },
+  { id: 'nukkad-natak', label: 'Nukkad Natak', title: 'Nukkad Natak', image: '/images/CHALTA_PURJA_DSC_0018.JPG.jpg', alt: 'Nukkad Natak performance', link: '' },
+  { id: 'makings', label: 'Makings', title: 'Makings', image: '/images/14481926_10154705811154155_7749548386138963213_o.jpg', alt: 'Students participating in an energetic outdoor school sports event', link: 'https://youtu.be/asnBD7xijew?si=dc4fknt_Xku9sXEQ' },
+  { id: 'theatre-workshops', label: 'Theatre Workshops', title: 'Theatre Workshops', image: '/images/33035528_1736966659713155_5229266611529056256_o.jpg', alt: 'A young student performing during a school talent show', link: 'https://youtu.be/-_UbUcgIiDA?si=wEIZPQGo1sadQ9Dp' },
+  { id: 'teacher-masterclass', label: 'Teacher Masterclass', title: 'Teacher Masterclass', image: '/images/DPS EXP 2.jpg', alt: 'Students gathered in graduation attire during a school ceremony', link: 'https://youtu.be/DnmEohT1zDo?si=OUp-0Xogw-M81onA' },
 ];
 const tabOrder = events;
 

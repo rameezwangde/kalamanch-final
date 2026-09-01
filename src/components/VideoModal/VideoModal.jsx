@@ -53,7 +53,7 @@ export default function VideoModal({ isOpen, onClose }) {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
             <video ref={videoRef} controls playsInline preload="metadata">
-              <source src="https://res.cloudinary.com/crw5jo8x/video/upload/v1785762834/IMG_0738_compressed_fqdcy9.mp4" type="video/mp4" />
+              <source src="/videos/kalamanch-hero.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
             </video>
           </motion.div>
