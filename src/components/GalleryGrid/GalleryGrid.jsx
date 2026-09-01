@@ -214,201 +214,261 @@ const LOCAL_IMAGES = [
   },
   {
     "id": "43",
-    "src": "/images/CL 1.jpg",
+    "src": "/images/CHALTA_PURJA_DSC_0018.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "44",
-    "src": "/images/CL 3.jpg",
+    "src": "/images/CHALTA_PURJA_DSC_0099.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "45",
-    "src": "/images/CL 5.jpg",
+    "src": "/images/CHALTA_PURJA_DSC_0103.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "46",
-    "src": "/images/CL 7.jpg",
+    "src": "/images/CHALTA_PURJA_DSC_0278.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "47",
-    "src": "/images/collage 3.png",
+    "src": "/images/CL 1.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "48",
-    "src": "/images/collage 4.png",
+    "src": "/images/CL 3.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "49",
-    "src": "/images/collage.png",
+    "src": "/images/CL 5.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "50",
-    "src": "/images/DJI_0028 (1).JPG",
+    "src": "/images/CL 7.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "51",
-    "src": "/images/DPS EXP 2.jpg",
+    "src": "/images/collage 3.png",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "52",
-    "src": "/images/dps fzr 1.jpg",
+    "src": "/images/collage 4.png",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "53",
-    "src": "/images/DSC00961.jpg",
+    "src": "/images/collage.png",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "54",
-    "src": "/images/DSC01367.jpg",
+    "src": "/images/DJI_0028 (1).JPG",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "55",
-    "src": "/images/DSC01406.jpg",
+    "src": "/images/DPS EXP 2.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "56",
-    "src": "/images/DSC_0312.JPG.jpg",
+    "src": "/images/dps fzr 1.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "57",
-    "src": "/images/DSC_0363.JPG.jpg",
+    "src": "/images/DSC00961.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "58",
-    "src": "/images/DSC_0494.JPG.jpg",
+    "src": "/images/DSC01367.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "59",
-    "src": "/images/IMG_2574.JPG",
+    "src": "/images/DSC01406.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "60",
-    "src": "/images/IMG_8422.JPG.jpg",
+    "src": "/images/DSC_0312.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "61",
-    "src": "/images/IMG_9482.JPG.jpg",
+    "src": "/images/DSC_0363.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "62",
-    "src": "/images/IMG_9700.JPG.jpg",
+    "src": "/images/DSC_0494.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "63",
-    "src": "/images/Kabir.jpg",
+    "src": "/images/GHERA_DSC_0018.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "64",
-    "src": "/images/kalamanch-team-school-event.jpg",
+    "src": "/images/GHERA_DSC_0021.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "65",
-    "src": "/images/SAM_4504.JPG.jpg",
+    "src": "/images/GHERA_DSC_0046.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "66",
-    "src": "/images/SAM_4526 copy.JPG.jpg",
+    "src": "/images/IMG_2574.JPG",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "67",
-    "src": "/images/SAM_4710.JPG.jpg",
+    "src": "/images/IMG_8422.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "68",
-    "src": "/images/SAM_4791.JPG.jpg",
+    "src": "/images/IMG_9482.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "69",
-    "src": "/images/SAM_4896.JPG.jpg",
+    "src": "/images/IMG_9700.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "70",
-    "src": "/images/SAM_4914.JPG.jpg",
+    "src": "/images/Kabir.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "71",
-    "src": "/images/Screenshot 2025-01-19 at 8.47.13 PM.jpg",
+    "src": "/images/kalamanch-team-school-event.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "72",
-    "src": "/images/Screenshot 2025-01-19 at 8.48.04 PM.jpg",
+    "src": "/images/KYA_YAHI_SABHYATA_DSC_0092.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "73",
-    "src": "/images/Screenshot 2025-01-19 at 8.54.37 PM.jpg",
+    "src": "/images/KYA_YAHI_SABHYATA_DSC_0115.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "74",
-    "src": "/images/Screenshot 2025-01-19 at 9.06.42 PM.jpg",
+    "src": "/images/KYA_YAHI_SABHYATA_DSC_0144.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "75",
-    "src": "/images/setup.jpg",
+    "src": "/images/KYA_YAHI_SABHYATA_DSC_0236.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "76",
-    "src": "/images/STL_0531.JPG.jpg",
+    "src": "/images/KYA_YAHI_SABHYATA_DSC_0239.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "77",
-    "src": "/images/Take.jpg",
+    "src": "/images/SAM_4504.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "78",
-    "src": "/images/_A3A7368.JPG.jpg",
+    "src": "/images/SAM_4526 copy.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "79",
-    "src": "/images/_DSC1640.jpg",
+    "src": "/images/SAM_4710.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "80",
-    "src": "/images/_DSC1683.JPG.jpg",
+    "src": "/images/SAM_4791.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "81",
-    "src": "/images/_DSC1693.JPG.jpg",
+    "src": "/images/SAM_4896.JPG.jpg",
     "title": "KalaManch Event Experience"
   },
   {
     "id": "82",
+    "src": "/images/SAM_4914.JPG.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "83",
+    "src": "/images/Screenshot 2025-01-19 at 8.47.13 PM.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "84",
+    "src": "/images/Screenshot 2025-01-19 at 8.48.04 PM.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "85",
+    "src": "/images/Screenshot 2025-01-19 at 8.54.37 PM.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "86",
+    "src": "/images/Screenshot 2025-01-19 at 9.06.42 PM.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "87",
+    "src": "/images/setup.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "88",
+    "src": "/images/STL_0531.JPG.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "89",
+    "src": "/images/Take.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "90",
+    "src": "/images/_A3A7368.JPG.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "91",
+    "src": "/images/_DSC1640.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "92",
+    "src": "/images/_DSC1683.JPG.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "93",
+    "src": "/images/_DSC1693.JPG.jpg",
+    "title": "KalaManch Event Experience"
+  },
+  {
+    "id": "94",
     "src": "/images/_DSC2061.jpg",
     "title": "KalaManch Event Experience"
   }
