@@ -75,7 +75,7 @@
 .moments-collage__lightbox {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 999999;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);

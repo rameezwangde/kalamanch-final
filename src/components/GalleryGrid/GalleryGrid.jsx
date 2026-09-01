@@ -1,4 +1,5 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import './GalleryGrid.css';
 
 const LOCAL_IMAGES = [
@@ -474,13 +475,30 @@ const LOCAL_IMAGES = [
   }
 ];
 
+
+
 export default function GalleryGrid() {
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const reduceMotion = useReducedMotion();
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : LOCAL_IMAGES.length - 1));
+    }
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((prev) => (prev < LOCAL_IMAGES.length - 1 ? prev + 1 : 0));
+    }
+  };
 
   return (
     <section className="gallery-albums-section">
       <div className="gallery-masonry">
-        {LOCAL_IMAGES.map((img) => (
+        {LOCAL_IMAGES.map((img, idx) => (
           <motion.div 
             key={img.id} 
             className="gallery-masonry-item"
@@ -488,16 +506,54 @@ export default function GalleryGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
+            onClick={() => setSelectedIndex(idx)}
+            style={{ cursor: 'pointer' }}
           >
             <img 
               src={img.src} 
               alt={img.title} 
               loading="lazy" 
               className="gallery-masonry-image"
+              style={{ pointerEvents: 'none' }}
             />
           </motion.div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {selectedIndex !== null && LOCAL_IMAGES[selectedIndex] && (
+          <motion.div 
+            className="moments-collage__lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedIndex(null)}
+          >
+            <button className="moments-collage__lightbox-close" onClick={() => setSelectedIndex(null)} aria-label="Close image">
+              <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+            </button>
+
+            <button className="moments-collage__lightbox-nav moments-collage__lightbox-nav--prev" onClick={handlePrev} aria-label="Previous image">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button className="moments-collage__lightbox-nav moments-collage__lightbox-nav--next" onClick={handleNext} aria-label="Next image">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <motion.div 
+              className="moments-collage__lightbox-content"
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.95, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.95, x: -20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img src={LOCAL_IMAGES[selectedIndex].src} alt={LOCAL_IMAGES[selectedIndex].title} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
