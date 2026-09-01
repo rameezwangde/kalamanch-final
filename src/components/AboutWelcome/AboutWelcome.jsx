@@ -57,7 +57,7 @@ export default function AboutWelcome() {
           {...(reduceMotion ? {} : revealImage)}
         >
           <img 
-            src="https://res.cloudinary.com/crw5jo8x/image/upload/f_auto,q_auto/v1785521374/_DSC1640_w0hiiq.jpg" 
+            src="/images/0M6A2787.jpg" 
             alt="Vibrant cultural festival performance by KalaManch" 
             className="about-welcome__image" 
             loading="lazy" 
