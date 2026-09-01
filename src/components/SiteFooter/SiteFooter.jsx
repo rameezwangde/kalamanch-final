@@ -44,15 +44,7 @@ const SiteFooter = React.memo(function SiteFooter() {
               <ul>
                 {group.links.map((link) => <li key={link.label}><a href={link.href}>{link.label}</a></li>)}
               </ul>
-              {group.title === 'KalaManch' && (
-                <div className="site-footer__extra-image" style={{ marginTop: '32px' }}>
-                  <img 
-                    src="https://res.cloudinary.com/crw5jo8x/image/upload/w_600,c_limit,f_auto,q_auto/v1785521374/_DSC1640_w0hiiq.jpg" 
-                    alt="KalaManch Moments" 
-                    style={{ width: '100%', height: 'auto', borderRadius: '4px', objectFit: 'cover' }} 
-                  />
-                </div>
-              )}
+
             </nav>
           ))}
 
