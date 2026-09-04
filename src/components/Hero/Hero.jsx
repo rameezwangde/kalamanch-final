@@ -76,14 +76,6 @@ export default function Hero() {
           <source src="/videos/kalamanch-hero.mp4" type="video/mp4" />
         </video>
 
-        <motion.div
-          className="hero-overlay"
-          aria-hidden="true"
-          initial={reduceMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, ease }}
-        />
-
 
         <main className="hero-content">
         </main>
