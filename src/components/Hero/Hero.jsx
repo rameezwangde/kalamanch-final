@@ -73,7 +73,7 @@ export default function Hero() {
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
         >
-          <source src="/videos/kalamanch-hero.mp4" type="video/mp4" />
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
 
 
